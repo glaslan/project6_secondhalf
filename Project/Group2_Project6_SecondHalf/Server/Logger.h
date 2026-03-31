@@ -4,11 +4,13 @@
 
 class Logger
 {
-	std::string path;
-	std::string errorpath;
+private:
+	std::ofstream logfilePtr;
+	std::ofstream errorfilePtr;
 
+public:
 	Logger(std::string path, std::string errorpath);
-
+	~Logger();
 	bool WriteToFile(std::string datetime, float fuel);
 	bool WriteError(std::string error);
 };

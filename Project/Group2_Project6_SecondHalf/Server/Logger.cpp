@@ -1,38 +1,40 @@
 #include "Logger.h"
 
 Logger::Logger(std::string path, std::string errorpath) {
-	this->path = path;
-	this->errorpath = errorpath;
+	logfilePtr.open(path.c_str(), std::ios::out | std::ios::app);
+	errorfilePtr.open(errorpath.c_str(), std::ios::out | std::ios::app);
+
+	if (!logfilePtr.is_open())
+		std::cout << "Error opening Log file\n";
+	if (!errorfilePtr.is_open())
+		std::cout << "Error opening Error file\n";
+}
+
+Logger::~Logger() {
+	logfilePtr.close();
+	errorfilePtr.close();
 }
 
 
 bool Logger::WriteToFile(std::string datetime, float fuel){
-	std::fstream logfile(Logger::path, std::ios::out);
-	if (!logfile.is_open()) {
+	if (!logfilePtr.is_open()) {
 		std::cerr << "Failed to open the file!" << std::endl;
 		return false;
 	}
 
-	logfile << datetime << " " << fuel << "\n";
-
-	// Reset the file pointer to the beginning
-	logfile.seekg(0);
-	logfile.close();
+	logfilePtr << datetime << " " << fuel << "\n";
 
 	return true;
 }
 
 
 bool Logger::WriteError(std::string error) {
-	std::fstream errorfile(Logger::errorpath, std::ios::out);
-	if (!errorfile.is_open()) {
+	if (!errorfilePtr.is_open()) {
 		std::cerr << "Failed to open the file!" << std::endl;
 		return false;
 	}
 
-	errorfile << error << "\n";
-	errorfile.seekg(0);
-	errorfile.close();
+	errorfilePtr << error << "\n";
 
 	return true;
 }
