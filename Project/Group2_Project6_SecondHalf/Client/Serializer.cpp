@@ -30,49 +30,46 @@ void Serializer::SerializeDatetime(std::string datetime) {
 	std::vector<std::string> dayMonthYear = parser.split(vals.at(0), '_');
 	std::vector<std::string> hourMinuteSecond = parser.split(vals.at(1), ':');
 
-	unsigned char day = std::stoi(dayMonthYear.at(0));
-	unsigned char month = std::stoi(dayMonthYear.at(1));
-	unsigned char year = std::stoi(dayMonthYear.at(2));
+	std::string day = (dayMonthYear.at(0));
+	std::string month = (dayMonthYear.at(1));
+	std::string year = (dayMonthYear.at(2));
 
-	unsigned char hour = std::stoi(hourMinuteSecond.at(0));
-	unsigned char minute = std::stoi(hourMinuteSecond.at(1));
-	unsigned char second = std::stoi(hourMinuteSecond.at(2));
+	std::string hour = (hourMinuteSecond.at(0));
+	std::string minute = (hourMinuteSecond.at(1));
+	std::string second = (hourMinuteSecond.at(2));
 
 	unsigned char meridian = 0;
 
-	if (hour > 11 && hour<24) {
+	if (std::stoi(hour) > 11 && std::stoi(hour) <24) {
 		meridian = 1;
 	}
-	if (hour > 12) {
-		hour -= 12;
+	if (std::stoi(hour) > 12) {
+		hour = std::to_string(std::stoi(hour) - 12);
 	}
 		
 
 	int offset = 0;
 	
-	memset(this->buffer, day, PKT_SIZE_DAY);
+	memcpy(this->buffer, day.c_str(), PKT_SIZE_DAY);
 	offset += PKT_SIZE_DAY;
 
-	memset(this->buffer + offset, month, PKT_SIZE_MONTH);
+	memcpy(this->buffer + offset, month.c_str(), PKT_SIZE_MONTH);
 	offset += PKT_SIZE_MONTH;
 
-	memset(this->buffer + offset, year, PKT_SIZE_YEAR);
+	memcpy(this->buffer + offset, year.c_str(), PKT_SIZE_YEAR);
 	offset += PKT_SIZE_YEAR;
 
-	memset(this->buffer + offset, minute, PKT_SIZE_MINUTES);
+	memcpy(this->buffer + offset, minute.c_str(), PKT_SIZE_MINUTES);
 	offset += PKT_SIZE_MINUTES;
 
 	memset(this->buffer + offset, meridian, PKT_SIZE_MERIDIAN);
 	offset += PKT_SIZE_MERIDIAN;
 
-	memset(this->buffer + offset, hour, PKT_SIZE_HOUR);
+	memcpy(this->buffer + offset, hour.c_str(), PKT_SIZE_HOUR);
 	offset += PKT_SIZE_HOUR;
 
-	memset(this->buffer + offset, second, PKT_SIZE_SECONDS);
+	memcpy(this->buffer + offset, second.c_str(), PKT_SIZE_SECONDS);
 	offset += PKT_SIZE_SECONDS;
-
-	memset(this->buffer + offset, 0, PKT_SIZE_PADDING);
-	offset += PKT_SIZE_PADDING;
 
 }
 
