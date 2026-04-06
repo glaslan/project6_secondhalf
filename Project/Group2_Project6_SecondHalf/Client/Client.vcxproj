@@ -125,11 +125,13 @@
   <ItemGroup>
     <ClInclude Include="..\Server\constants.h" />
     <ClInclude Include="..\Server\packet.h" />
+    <ClInclude Include="FileReader.h" />
     <ClInclude Include="Parser.h" />
     <ClInclude Include="Serializer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="client.cpp" />
+    <ClCompile Include="FileReader.cpp" />
     <ClCompile Include="Parser.cpp" />
     <ClCompile Include="Serializer.cpp" />
   </ItemGroup>
