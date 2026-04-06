@@ -77,17 +77,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\glasd\source\repos\project6_secondhalf\Project\Group2_Project6_SecondHalf\Server;C:\Users\glasd\source\repos\project6_secondhalf\Project\Group2_Project6_SecondHalf\Client;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\andre\OneDrive\Desktop\School\Project 6\Project2\project6_secondhalf\Project\Group2_Project6_SecondHalf\Server;C:\Users\andre\OneDrive\Desktop\School\Project 6\Project2\project6_secondhalf\Project\Group2_Project6_SecondHalf\Client</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\andre\OneDrive\Desktop\School\Project 6\Project2\project6_secondhalf\Project\Group2_Project6_SecondHalf\Server;C:\Users\andre\OneDrive\Desktop\School\Project 6\Project2\project6_secondhalf\Project\Group2_Project6_SecondHalf\Client</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\andre\OneDrive\Desktop\School\Project 6\Project2\project6_secondhalf\Project\Group2_Project6_SecondHalf\Server;C:\Users\andre\OneDrive\Desktop\School\Project 6\Project2\project6_secondhalf\Project\Group2_Project6_SecondHalf\Client</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\andre\OneDrive\Desktop\School\Project 6\Project2\project6_secondhalf\Project\Group2_Project6_SecondHalf\Server;C:\Users\andre\OneDrive\Desktop\School\Project 6\Project2\project6_secondhalf\Project\Group2_Project6_SecondHalf\Client</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -101,8 +103,8 @@
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;C:\Users\glasd\source\repos\project6_secondhalf\Project\Group2_Project6_SecondHalf\Server\x64\Debug;C:\Users\glasd\source\repos\project6_secondhalf\Project\Group2_Project6_SecondHalf\Client\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Logger.obj;Deserializer.obj;Parser.obj;Serializer.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;C:\Users\andre\OneDrive\Desktop\School\Project 6\Project2\project6_secondhalf\Project\Group2_Project6_SecondHalf\Server\x64\Debug;C:\Users\andre\OneDrive\Desktop\School\Project 6\Project2\project6_secondhalf\Project\Group2_Project6_SecondHalf\Client\x64\Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>server.obj;Logger.obj;Deserializer.obj;Serializer.obj;Parser.obj</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -117,7 +119,8 @@
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;C:\Users\andre\OneDrive\Desktop\School\Project 6\Project2\project6_secondhalf\Project\Group2_Project6_SecondHalf\Server\x64\Debug;C:\Users\andre\OneDrive\Desktop\School\Project 6\Project2\project6_secondhalf\Project\Group2_Project6_SecondHalf\Client\x64\Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>server.obj;Logger.obj;Deserializer.obj;Serializer.obj;Parser.obj</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -136,7 +139,8 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;C:\Users\andre\OneDrive\Desktop\School\Project 6\Project2\project6_secondhalf\Project\Group2_Project6_SecondHalf\Server\x64\Debug;C:\Users\andre\OneDrive\Desktop\School\Project 6\Project2\project6_secondhalf\Project\Group2_Project6_SecondHalf\Client\x64\Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>server.obj;Logger.obj;Deserializer.obj;Serializer.obj;Parser.obj</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -155,8 +159,8 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;C:\Users\andre\OneDrive\Desktop\School\Project 6\Project2\project6_secondhalf\Project\Group2_Project6_SecondHalf\Server\x64\Debug;C:\Users\andre\OneDrive\Desktop\School\Project 6\Project2\project6_secondhalf\Project\Group2_Project6_SecondHalf\Client\x64\Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>server.obj;Logger.obj;Deserializer.obj;Serializer.obj;Parser.obj</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
