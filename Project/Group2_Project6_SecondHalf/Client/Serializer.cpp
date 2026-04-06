@@ -15,8 +15,14 @@ void Serializer::Serialize(std::string datetime, float fuel) {
 
 	memset(this->buffer, 0, BUFFER_SIZE);
 
+	this->SerializeFlag(FLAG_CONTINUE);
 	this->SerializeDatetime(datetime);
 	this->SerializeFuel(fuel);
+}
+
+void Serializer::SerializeEndPacket() {
+	memset(this->buffer, 0, BUFFER_SIZE);
+	this->SerializeFlag(FLAG_END);
 }
 
 void Serializer::SerializeDatetime(std::string datetime) {
@@ -48,7 +54,7 @@ void Serializer::SerializeDatetime(std::string datetime) {
 	}
 		
 
-	int offset = 0;
+	int offset = PKT_SIZE_FLAG;
 	
 	memcpy(this->buffer, day.c_str(), PKT_SIZE_DAY);
 	offset += PKT_SIZE_DAY;
@@ -75,6 +81,10 @@ void Serializer::SerializeDatetime(std::string datetime) {
 
 void Serializer::SerializeFuel(float fuel) {
 	memset(this->buffer + PKT_OFFSET_TO_FUEL, fuel, PKT_SIZE_FUEL);
+}
+
+void Serializer::SerializeFlag(int flag) {
+	memset(this->buffer, flag, PKT_SIZE_FLAG);
 }
 
 bool Serializer::Send(SOCKET connection) {

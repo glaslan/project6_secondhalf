@@ -14,6 +14,8 @@ public:
 
 	Serializer();
 	void Serialize(std::string datetime, float fuel);
+	void SerializeEndPacket();
+	void SerializeFlag(int flag);
 	void SerializeDatetime(std::string datetime);
 	void SerializeFuel(float fuel);
 	bool Send(SOCKET connection);
