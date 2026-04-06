@@ -1,3 +1,4 @@
+*.vcxproj*
 # Prerequisites
 *.d
 *.vs
