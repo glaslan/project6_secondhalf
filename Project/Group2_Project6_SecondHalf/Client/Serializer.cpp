@@ -1,6 +1,7 @@
 
 #include <vector>
 #include <string>
+#include <winsock2.h>
 
 #include "Serializer.h"
 #include "Parser.h"
@@ -87,8 +88,8 @@ void Serializer::SerializeFlag(int flag) {
 	memset(this->buffer, flag, PKT_SIZE_FLAG);
 }
 
-bool Serializer::Send(SOCKET connection) {
-	send(connection, this->buffer, sizeof(char*) * BUFFER_SIZE, 0);
+char* Serializer::GetBuffer() {
+	return this->buffer;
 }
 
 Serializer::~Serializer() {

@@ -129,6 +129,7 @@
     <ClInclude Include="Serializer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="client.cpp" />
     <ClCompile Include="Parser.cpp" />
     <ClCompile Include="Serializer.cpp" />
   </ItemGroup>
