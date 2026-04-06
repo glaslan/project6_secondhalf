@@ -21,7 +21,6 @@ public:
 		// Byte 2 -> 2.5
 		unsigned char hour : PKT_SIZE_HOUR;
 		unsigned char seconds : PKT_SIZE_SECONDS;
-		unsigned char padding : PKT_SIZE_PADDING;
 
 		// Byte 2.5 -> 3.5
 		unsigned char fuelData : PKT_SIZE_FUEL;
