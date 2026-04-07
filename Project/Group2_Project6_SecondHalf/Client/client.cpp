@@ -1,7 +1,10 @@
 
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
+
 #include <cstring>
 #include <iostream>
 #include <vector>
+#include <windows.h> 
 #include <winsock.h>
 #include <thread>
 #include <chrono>
@@ -11,8 +14,18 @@
 #include "Parser.h"
 #include "Serializer.h"
 
+#pragma warning(disable : 4996)
+#pragma comment(lib, "ws2_32.lib")
+
 
 int main() {
+
+    WSADATA wsaData;
+
+    if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
+        std::cout << "ERROR: Failed to start WSA" << std::endl;
+        return 0;
+    }
 
     // safe default value
     char input = ' ';
@@ -65,5 +78,8 @@ int main() {
     
 
     closesocket(ClientSocket);
+
+    WSACleanup();
+
     return 0;
 }

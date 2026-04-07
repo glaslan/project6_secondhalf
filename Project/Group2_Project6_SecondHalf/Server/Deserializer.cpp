@@ -14,8 +14,12 @@ void Deserializer::DeserializeBuffer(char* buffer) {
 	char second[PKT_SIZE_SECONDS + 1];
 	unsigned char meridian;
 	float fuel;
+	int flag;
 
 	int offset = 0;
+
+	memcpy(&flag, buffer + offset, PKT_SIZE_FLAG);
+	offset += PKT_SIZE_FLAG;
 
 	memcpy(&day, buffer + offset, PKT_SIZE_DAY);
 	memset(&day + PKT_SIZE_DAY, '\0', sizeof(char));
