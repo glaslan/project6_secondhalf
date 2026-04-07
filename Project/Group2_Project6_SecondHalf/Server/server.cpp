@@ -38,7 +38,8 @@ void ServerThread(int ServerSocket, int ConnectionSocket) {
     // Recieve must come first
     bool quit = false;
     while (!quit) {
-        recv(ConnectionSocket, buffer, sizeof(buffer), 0);
+        int bytes = recv(ConnectionSocket, buffer, sizeof(buffer), 0);
+        if (bytes <= 0) break;
         deserializer.DeserializeBuffer(buffer);
         int flag = deserializer.GetFlag();
         std::stringstream stream;
