@@ -58,6 +58,8 @@ int main() {
     while (reader.IsOpen()) {
 
         std::string line = reader.ReadLine();
+        if (line.empty()) break;
+
         std::vector<std::string> values = parser.split(line, ',');
 
         std::string datetime;
@@ -67,9 +69,12 @@ int main() {
             datetime = values.at(1);
             fuel_usage = std::stof(values.at(2));
         }
-        else {
+        else if (values.size() >= 2) {
             datetime = values.at(0);
             fuel_usage = std::stof(values.at(1));
+        }
+        else {
+            continue;
         }
 
         std::cout << "Serialize Packet" << std::endl;

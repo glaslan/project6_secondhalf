@@ -12,7 +12,7 @@ std::string Reader::ReadLine() {
 }
 
 bool Reader::IsOpen() {
-    return this->file.is_open();
+    return this->file.is_open() && !this->file.eof();
 }
 
 Reader::~Reader() {
