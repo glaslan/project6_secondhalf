@@ -1,4 +1,4 @@
-#include "UsageCalculator.h"
+#include "FuelUsageCalculator.h"
 
 UsageCalculator::UsageCalculator(float initial_fuel) {
     previous_fuel = initial_fuel;

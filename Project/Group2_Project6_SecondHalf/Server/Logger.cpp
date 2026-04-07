@@ -16,13 +16,13 @@ Logger::~Logger() {
 }
 
 
-bool Logger::WriteToFile(std::string datetime, float fuel){
+bool Logger::WriteToFile(std::string line){
 	if (!logfilePtr.is_open()) {
 		std::cerr << "Failed to open the file!" << std::endl;
 		return false;
 	}
 
-	logfilePtr << datetime << " " << fuel << "\n";
+	logfilePtr << line << "\n";
 
 	return true;
 }

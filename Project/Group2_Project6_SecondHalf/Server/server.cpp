@@ -5,8 +5,13 @@
 #include <vector>
 #include <windows.h> 
 #include <winsock.h> 
+#include <ctime>
+#include <sstream>
 
 #include "constants.h"
+#include "Deserializer.h"
+#include "Logger.h"
+#include "FuelUsageCalculator.h"
 
 #pragma warning(disable : 4996)
 #pragma comment(lib, "ws2_32.lib")
@@ -18,20 +23,29 @@ void ServerThread(int ServerSocket, int ConnectionSocket) {
     std::ofstream postFile;
     char buffer[BUFFER_SIZE] = { 0 };
 
+    std::time_t unix_time = std::time(0); 
+
+    Logger logger("Logs/" + std::to_string(unix_time), "Errors/" + std::to_string(unix_time));
+    Deserializer deserializer;
+    UsageCalculator calculator(0);
+
     // This block makes the data move
     // Recieve must come first
     bool quit = false;
     while (!quit) {
         recv(ConnectionSocket, buffer, sizeof(buffer), 0);
+        deserializer.DeserializeBuffer(buffer);
+        int flag = deserializer.GetFlag();
+        std::stringstream stream;
         
-        switch (buffer[0]) {
-            case '0':
+        switch (flag) {
+            case FLAG_CONTINUE:
+                calculator.process_fuel_data(deserializer.GetFuel());
+                stream << "Time: " << deserializer.GetDatetime() << ", Average Fuel Used: " << calculator.getAverageConsumption() << ", Current Fuel Used: " << calculator.getRecentDifference();
+                logger.WriteToFile(stream.str());
                 break;
-            case '1':
-                break;
-            case '2':
-                break;
-            case '3':
+            case FLAG_END:
+                quit = true;
                 break;
             default:
                 std::cout << "Bad Input" << std::endl;

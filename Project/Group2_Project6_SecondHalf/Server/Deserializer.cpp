@@ -69,6 +69,10 @@ float Deserializer::GetFuel() {
 	return this->fuel;
 }
 
+int Deserializer::GetFlag() {
+	return this->flag;
+}
+
 std::string Deserializer::GetDatetime() {
 	return this->datetime;
 }

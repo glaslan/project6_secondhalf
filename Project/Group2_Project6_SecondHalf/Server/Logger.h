@@ -11,6 +11,6 @@ private:
 public:
 	Logger(std::string path, std::string errorpath);
 	~Logger();
-	bool WriteToFile(std::string datetime, float fuel);
+	bool WriteToFile(std::string data);
 	bool WriteError(std::string error);
 };
