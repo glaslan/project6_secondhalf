@@ -7,47 +7,34 @@
 
 void Deserializer::DeserializeBuffer(char* buffer) {
 
-	char day[PKT_SIZE_DAY + 1];
-	char month[PKT_SIZE_MONTH + 1];
-	char year[PKT_SIZE_YEAR + 1];
-	char hour[PKT_SIZE_HOUR + 1];
-	char minute[PKT_SIZE_MINUTES + 1];
-	char second[PKT_SIZE_SECONDS + 1];
-	unsigned char meridian;
-	float fuel;
-
 	int offset = 0;
 
 	memcpy(&this->flag, buffer + offset, PKT_SIZE_FLAG);
 	offset += PKT_SIZE_FLAG;
 
-	memcpy(&day, buffer + offset, PKT_SIZE_DAY);
-	day[PKT_SIZE_DAY] = '\0';
+	std::string day(buffer + offset, PKT_SIZE_DAY);
 	offset += PKT_SIZE_DAY;
 
-	memcpy(&month, buffer + offset, PKT_SIZE_MONTH);
-	month[PKT_SIZE_MONTH] = '\0';
+	std::string month(buffer + offset, PKT_SIZE_MONTH);
 	offset += PKT_SIZE_MONTH;
 
-	memcpy(&year, buffer + offset, PKT_SIZE_YEAR);
-	year[PKT_SIZE_YEAR] = '\0';
+	std::string year(buffer + offset, PKT_SIZE_YEAR);
 	offset += PKT_SIZE_YEAR;
 
-	memcpy(&minute, buffer + offset, PKT_SIZE_MINUTES);
-	minute[PKT_SIZE_MINUTES] = '\0';
+	std::string minute(buffer + offset, PKT_SIZE_MINUTES);
 	offset += PKT_SIZE_MINUTES;
 
+	unsigned char meridian;
 	memcpy(&meridian, buffer + offset, PKT_SIZE_MERIDIAN);
 	offset += PKT_SIZE_MERIDIAN;
 
-	memcpy(&hour, buffer + offset, PKT_SIZE_HOUR);
-	hour[PKT_SIZE_HOUR] = '\0';
+	std::string hour(buffer + offset, PKT_SIZE_HOUR);
 	offset += PKT_SIZE_HOUR;
 
-	memcpy(&second, buffer + offset, PKT_SIZE_SECONDS);
-	second[PKT_SIZE_SECONDS] = '\0';
+	std::string second(buffer + offset, PKT_SIZE_SECONDS);
 	offset += PKT_SIZE_SECONDS;
 
+	float fuel;
 	memcpy(&fuel, buffer + offset, PKT_SIZE_FUEL);
 	offset += PKT_SIZE_FUEL;
 
@@ -55,7 +42,7 @@ void Deserializer::DeserializeBuffer(char* buffer) {
 	std::stringstream stream;
 
 	stream << day << "/" << month << "/" << year << " ";
-	if (meridian) {
+	if (meridian == '1') {
 		stream << "PM ";
 	}
 	else {
