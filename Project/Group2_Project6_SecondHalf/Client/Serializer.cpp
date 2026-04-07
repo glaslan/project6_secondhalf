@@ -51,9 +51,6 @@ void Serializer::SerializeDatetime(std::string datetime) {
 	std::string year = (dayMonthYear.at(2));
 
 	std::string hour = (hourMinuteSecond.at(0));
-	if (hour.length() == 1) {
-		hour = "0" + hour;
-	}
 	std::string minute = (hourMinuteSecond.at(1));
 	if (minute.length() == 1) {
 		minute = "0" + minute;
@@ -70,6 +67,9 @@ void Serializer::SerializeDatetime(std::string datetime) {
 	}
 	if (std::stoi(hour) > 12) {
 		hour = std::to_string(std::stoi(hour) - 12);
+	}
+	if (hour.length() == 1) {
+		hour = "0" + hour;
 	}
 		
 
@@ -94,9 +94,7 @@ void Serializer::SerializeDatetime(std::string datetime) {
 	offset += PKT_SIZE_HOUR;
 
 	memcpy(this->buffer + offset, second.c_str(), PKT_SIZE_SECONDS);
-	offset += PKT_SIZE_SECONDS;
-
-	memset(this->buffer + offset, '\0', sizeof(char));
+	offset += PKT_SIZE_SECONDS; 
 
 	std::cout << this->buffer;
 
@@ -104,6 +102,7 @@ void Serializer::SerializeDatetime(std::string datetime) {
 
 void Serializer::SerializeFuel(float fuel) {
 	memset(this->buffer + PKT_OFFSET_TO_FUEL, fuel, PKT_SIZE_FUEL);
+	memset(this->buffer + PKT_OFFSET_TO_FUEL + 1, '\0', PKT_SIZE_FUEL);
 }
 
 void Serializer::SerializeFlag(int flag) {
