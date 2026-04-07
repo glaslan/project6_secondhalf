@@ -37,18 +37,36 @@ void Serializer::SerializeDatetime(std::string datetime) {
 	std::vector<std::string> dayMonthYear = parser.split(vals.at(0), '_');
 	std::vector<std::string> hourMinuteSecond = parser.split(vals.at(1), ':');
 
+	std::cout << dayMonthYear.at(0) << ":" << dayMonthYear.at(1) << ":" << dayMonthYear.at(2) << std::endl;
+	std::cout << hourMinuteSecond.at(0) << ":" << hourMinuteSecond.at(1) << ":" << hourMinuteSecond.at(2) << std::endl;
+
 	std::string day = (dayMonthYear.at(0));
+	if (day.length() == 1) {
+		day = "0" + day;
+	}
 	std::string month = (dayMonthYear.at(1));
+	if (month.length() == 1) {
+		month = "0" + month;
+	}
 	std::string year = (dayMonthYear.at(2));
 
 	std::string hour = (hourMinuteSecond.at(0));
+	if (hour.length() == 1) {
+		hour = "0" + hour;
+	}
 	std::string minute = (hourMinuteSecond.at(1));
+	if (minute.length() == 1) {
+		minute = "0" + minute;
+	}
 	std::string second = (hourMinuteSecond.at(2));
+	if (second.length() == 1) {
+		second = "0" + second;
+	}
 
-	unsigned char meridian = 0;
+	char meridian = '0';
 
 	if (std::stoi(hour) > 11 && std::stoi(hour) <24) {
-		meridian = 1;
+		meridian = '1';
 	}
 	if (std::stoi(hour) > 12) {
 		hour = std::to_string(std::stoi(hour) - 12);
@@ -57,7 +75,7 @@ void Serializer::SerializeDatetime(std::string datetime) {
 
 	int offset = PKT_SIZE_FLAG;
 	
-	memcpy(this->buffer, day.c_str(), PKT_SIZE_DAY);
+	memcpy(this->buffer + offset, day.c_str(), PKT_SIZE_DAY);
 	offset += PKT_SIZE_DAY;
 
 	memcpy(this->buffer + offset, month.c_str(), PKT_SIZE_MONTH);
@@ -77,6 +95,10 @@ void Serializer::SerializeDatetime(std::string datetime) {
 
 	memcpy(this->buffer + offset, second.c_str(), PKT_SIZE_SECONDS);
 	offset += PKT_SIZE_SECONDS;
+
+	memset(this->buffer + offset, '\0', sizeof(char));
+
+	std::cout << this->buffer;
 
 }
 

@@ -1,5 +1,6 @@
 
 #include <sstream>
+#include <iostream>
 
 #include "Deserializer.h"
 #include "constants.h"
@@ -63,6 +64,7 @@ void Deserializer::DeserializeBuffer(char* buffer) {
 		stream << "AM ";
 	}
 	stream << hour << ":" << minute << ":" << second;
+	std::cout << stream.str();
 
 	// set values
 	this->datetime = stream.str();

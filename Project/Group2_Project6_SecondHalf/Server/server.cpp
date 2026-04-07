@@ -19,13 +19,18 @@
 
 void ServerThread(int ServerSocket, int ConnectionSocket) {
 
-    // Accept Connection
+    // Accept Connection 
     std::ofstream postFile;
-    char buffer[BUFFER_SIZE] = { 0 };
-
+    char buffer[BUFFER_SIZE] = { 0 }; 
     std::time_t unix_time = std::time(0); 
+    
+    //std::string log_path("./Logs/" + std::to_string(unix_time) + ".txt");
+    //std::string error_path("./Errors/" + std::to_string(unix_time) + ".txt");
 
-    Logger logger("Logs/" + std::to_string(unix_time), "Errors/" + std::to_string(unix_time));
+    //std::cout << log_path << std::endl;
+    //std::cout << error_path << std::endl;
+
+    // Logger logger(log_path, error_path);
     Deserializer deserializer;
     UsageCalculator calculator(0);
 
@@ -42,7 +47,7 @@ void ServerThread(int ServerSocket, int ConnectionSocket) {
             case FLAG_CONTINUE:
                 calculator.process_fuel_data(deserializer.GetFuel());
                 stream << "Time: " << deserializer.GetDatetime() << ", Average Fuel Used: " << calculator.getAverageConsumption() << ", Current Fuel Used: " << calculator.getRecentDifference();
-                logger.WriteToFile(stream.str());
+                // logger.WriteToFile(stream.str());
                 break;
             case FLAG_END:
                 quit = true;

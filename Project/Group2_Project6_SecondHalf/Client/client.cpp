@@ -60,8 +60,23 @@ int main() {
         std::string line = reader.ReadLine();
         std::vector<std::string> values = parser.split(line, ',');
 
-        serializer.Serialize(values.at(0), std::stof(values.at(1)));
+        std::string datetime;
+        float fuel_usage;
+
+        if (values.size() > 3) {
+            datetime = values.at(1);
+            fuel_usage = std::stof(values.at(2));
+        }
+        else {
+            datetime = values.at(0);
+            fuel_usage = std::stof(values.at(1));
+        }
+
+        std::cout << "Serialize Packet" << std::endl;
+
+        serializer.Serialize(datetime, fuel_usage);
         
+        std::cout << "Send Packet: " << serializer.GetBuffer() << std::endl;
         
         send(ClientSocket, serializer.GetBuffer(), BUFFER_SIZE, 0);
 
@@ -74,8 +89,6 @@ int main() {
     serializer.SerializeEndPacket();
     send(ClientSocket, serializer.GetBuffer(), BUFFER_SIZE, 0);
 
-
-    
 
     closesocket(ClientSocket);
 
