@@ -6,7 +6,7 @@ class Deserializer {
 
 	std::string datetime;
 	float fuel;
-	int flag;
+	unsigned char flag;
 
 public:
 

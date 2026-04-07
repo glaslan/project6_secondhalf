@@ -31,14 +31,15 @@ void Serializer::SerializeDatetime(std::string datetime) {
 	// parse datetime
 	Parser parser;
 
+	if (datetime.at(0) == ' ') {
+		datetime = datetime.substr(1, datetime.length()-1);
+	}
+
 	// split into dd/mm/yyyy and hh:mm:ss
 	std::vector<std::string> vals = parser.split(datetime, ' ');
-	
+
 	std::vector<std::string> dayMonthYear = parser.split(vals.at(0), '_');
 	std::vector<std::string> hourMinuteSecond = parser.split(vals.at(1), ':');
-
-	std::cout << dayMonthYear.at(0) << ":" << dayMonthYear.at(1) << ":" << dayMonthYear.at(2) << std::endl;
-	std::cout << hourMinuteSecond.at(0) << ":" << hourMinuteSecond.at(1) << ":" << hourMinuteSecond.at(2) << std::endl;
 
 	std::string day = (dayMonthYear.at(0));
 	if (day.length() == 1) {
@@ -101,12 +102,12 @@ void Serializer::SerializeDatetime(std::string datetime) {
 }
 
 void Serializer::SerializeFuel(float fuel) {
-	memset(this->buffer + PKT_OFFSET_TO_FUEL, fuel, PKT_SIZE_FUEL);
-	memset(this->buffer + PKT_OFFSET_TO_FUEL + 1, '\0', PKT_SIZE_FUEL);
+	memcpy(this->buffer + PKT_OFFSET_TO_FUEL, &fuel, PKT_SIZE_FUEL);
+	memset(this->buffer + PKT_OFFSET_TO_FUEL + sizeof(float), '\0', PKT_SIZE_FUEL);
 }
 
-void Serializer::SerializeFlag(int flag) {
-	memset(this->buffer, flag, PKT_SIZE_FLAG);
+void Serializer::SerializeFlag(unsigned char flag) {
+	memcpy(this->buffer, &flag, PKT_SIZE_FLAG);
 }
 
 char* Serializer::GetBuffer() {

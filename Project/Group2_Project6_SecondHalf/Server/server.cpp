@@ -54,6 +54,7 @@ void ServerThread(int ServerSocket, int ConnectionSocket) {
                 break;
             default:
                 std::cout << "Bad Input" << std::endl;
+                quit = true;
                 break;
         }
     }
