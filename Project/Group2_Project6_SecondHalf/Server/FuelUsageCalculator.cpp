@@ -5,24 +5,33 @@ UsageCalculator::UsageCalculator(float initial_fuel) {
     current_fuel = initial_fuel;
     total_consumed = 0.0;
     time_intervals = 0;
+	recent_difference = 0.0;
+	has_first_reading = false;
 }
 
 void UsageCalculator::process_fuel_data(float new_level) {
 
-    time_intervals++;
-
-    float difference = previous_fuel - new_level;
-
-    if (difference < 0) {
-        total_consumed += difference;
+    if (!has_first_reading) {
+		has_first_reading = true;
+		recent_difference = 0.0;
+		previous_fuel = new_level;
+		current_fuel = new_level;
+		return;
     }
 
-    current_fuel = new_level;
-    previous_fuel = new_level;
+	current_fuel = new_level;
+    recent_difference = previous_fuel - current_fuel;
+
+    if (recent_difference > 0) {
+		total_consumed += recent_difference;
+		time_intervals++;
+    }
+
+	previous_fuel = current_fuel;
 }
 
 float UsageCalculator::getRecentDifference() const {
-    return previous_fuel - current_fuel;
+    return recent_difference;
 }
 
 float UsageCalculator::getAverageConsumption() const {

@@ -50,7 +50,7 @@ int main() {
     }
 
     // open file and modules
-    Reader reader("FlightData/katl-kefd-B737-700.txt");
+    Reader reader("FlightData/Telem_2023_3_12 14_56_40.txt"); // Changed the file to another one - Stephan
     Serializer serializer;
     Parser parser;
 
