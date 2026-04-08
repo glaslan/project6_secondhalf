@@ -24,13 +24,13 @@ void ServerThread(int ServerSocket, int ConnectionSocket) {
     char buffer[BUFFER_SIZE] = { 0 }; 
     std::time_t unix_time = std::time(0); 
     
-    //std::string log_path("./Logs/" + std::to_string(unix_time) + ".txt");
-    //std::string error_path("./Errors/" + std::to_string(unix_time) + ".txt");
+    std::string log_path("./log" + std::to_string(unix_time) + ".txt");
+    std::string error_path("./error" + std::to_string(unix_time) + ".txt");
 
     //std::cout << log_path << std::endl;
     //std::cout << error_path << std::endl;
 
-    // Logger logger(log_path, error_path);
+    Logger logger(log_path, error_path);
     Deserializer deserializer;
     UsageCalculator calculator(0);
 
@@ -48,7 +48,7 @@ void ServerThread(int ServerSocket, int ConnectionSocket) {
             case FLAG_CONTINUE:
                 calculator.process_fuel_data(deserializer.GetFuel());
                 stream << "Time: " << deserializer.GetDatetime() << ", Average Fuel Used: " << calculator.getAverageConsumption() << ", Current Fuel Used: " << calculator.getRecentDifference();
-                // logger.WriteToFile(stream.str());
+                logger.WriteToFile(stream.str());
                 break;
             case FLAG_END:
                 quit = true;
@@ -65,9 +65,11 @@ void ServerThread(int ServerSocket, int ConnectionSocket) {
 int main() {
 
     WSADATA wsaData;
+    Logger* main_logger = new Logger("./log.txt", "./errorlog.txt");
 
     if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
         std::cout << "ERROR: Failed to start WSA" << std::endl;
+        main_logger->WriteError("ERROR: Failed to start WSA");
         return 0;
     }
 
@@ -78,6 +80,7 @@ int main() {
     ServerSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (ServerSocket < 0) {
         std::cout << "ERROR: Failed to create ServerSocket" << std::endl;
+        main_logger->WriteError("ERROR: Failed to create ServerSocket");
         return 0;
     }
 
@@ -89,12 +92,15 @@ int main() {
     if (bind(ServerSocket, (struct sockaddr*)&SvrAddr, sizeof(SvrAddr)) == -1) {
         closesocket(ServerSocket);
         std::cout << "ERROR: Failed to bind ServerSocket" << std::endl;
+        main_logger->WriteError("ERROR: Failed to bind ServerSocket");
         return 0;
     }
 
     // wait for a incoming connection
     if (listen(ServerSocket, 1) == -1) {
         std::cout << "ERROR: listen failed to configure ServerSocket" << std::endl;
+        main_logger->WriteError("ERROR: listen failed to configure ServerSocket");
+        
     }
     int ConnectionSocket;
 
@@ -113,7 +119,6 @@ int main() {
     }
 
     // Close socket
-
     closesocket(ServerSocket);
     WSACleanup();
     return 0;
