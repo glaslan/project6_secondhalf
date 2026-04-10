@@ -8,6 +8,7 @@
 #include <winsock.h>
 #include <thread>
 #include <chrono>
+#include <random>
 
 #include "../Server/constants.h"
 #include "FileReader.h"
@@ -50,7 +51,18 @@ int main() {
     }
 
     // open file and modules
-    Reader reader("FlightData/Telem_2023_3_12 14_56_40.txt"); // Changed the file to another one - Stephan
+    std::vector<std::string> files;
+
+    files.push_back("FlightData/katl-kefd-B737-700.txt");
+    files.push_back("FlightData/Telem_2023_3_12 14_56_40.txt");
+    files.push_back("FlightData/Telem_2023_3_12 16_26_4.txt");
+    files.push_back("FlightData/Telem_2023_3_12 14_56_40.txt");
+
+    std::random_device rd;
+    std::mt19937 random_engine(rd());
+    std::uniform_int_distribution<> random_generator(0, files.size() - 1);
+
+    Reader reader(files.at(random_generator(random_engine)));
     Serializer serializer;
     Parser parser;
 
