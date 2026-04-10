@@ -3,6 +3,7 @@
 #include <fstream>
 
 /// @brief 
+/// Creates log files and writes information or errors to them.
 
 class Logger
 {

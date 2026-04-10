@@ -1,6 +1,6 @@
 #include "Logger.h"
 
-/// @brief 
+/// @brief Constructor that creates and/or opens a log file and an error log file at the provided paths.
 /// @param path 
 /// @param errorpath 
 
@@ -23,20 +23,20 @@ Logger::Logger(std::string path, std::string errorpath) {
 		std::cerr << "Error opening Error file\n";
 }
 
-/// @brief 
+/// @brief Deconstructor that closes the two files
 
 Logger::~Logger() {
 	logfilePtr.close();
 	errorfilePtr.close();
 }
 
-/// @brief 
+/// @brief Writes a line to the log file.
 /// @param line 
-/// @return 
+/// @return bool
 
 bool Logger::WriteToFile(std::string line){
 	if (!logfilePtr.is_open()) {
-		std::cerr << "Failed to open the file!" << std::endl;
+		std::cerr << "Log file not open" << std::endl;
 		return false;
 	}
 
@@ -45,13 +45,13 @@ bool Logger::WriteToFile(std::string line){
 	return true;
 }
 
-/// @brief 
+/// @brief Writes a line to the error file.
 /// @param error 
-/// @return 
+/// @return bool
 
 bool Logger::WriteError(std::string error) {
 	if (!errorfilePtr.is_open()) {
-		std::cerr << "Failed to open the file!" << std::endl;
+		std::cerr << "Error file not open" << std::endl;
 		return false;
 	}
 
