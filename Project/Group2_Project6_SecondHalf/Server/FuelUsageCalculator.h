@@ -4,6 +4,8 @@
 #include <string>
 #include <ctime>
 
+/// @brief 
+
 class UsageCalculator {
 private:
     float previous_fuel;

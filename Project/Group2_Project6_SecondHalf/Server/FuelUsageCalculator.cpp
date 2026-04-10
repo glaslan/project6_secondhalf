@@ -1,5 +1,11 @@
 #include "FuelUsageCalculator.h"
 
+/// @brief 
+/// 
+/// 
+/// 
+/// @param initial_fuel 
+
 UsageCalculator::UsageCalculator(float initial_fuel) {
     previous_fuel = initial_fuel;
     current_fuel = initial_fuel;
@@ -8,6 +14,12 @@ UsageCalculator::UsageCalculator(float initial_fuel) {
 	recent_difference = 0.0;
 	has_first_reading = false;
 }
+
+/// @brief 
+/// 
+/// 
+/// 
+/// @param new_level 
 
 void UsageCalculator::process_fuel_data(float new_level) {
 
@@ -30,9 +42,21 @@ void UsageCalculator::process_fuel_data(float new_level) {
 	previous_fuel = current_fuel;
 }
 
+/// @brief 
+/// 
+/// 
+/// 
+/// @return 
+
 float UsageCalculator::getRecentDifference() const {
     return recent_difference;
 }
+
+/// @brief 
+/// 
+/// 
+/// 
+/// @return 
 
 float UsageCalculator::getAverageConsumption() const {
     if (time_intervals == 0) {

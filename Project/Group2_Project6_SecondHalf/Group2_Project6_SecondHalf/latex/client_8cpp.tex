@@ -1,0 +1,67 @@
+\doxysection{Client/client.cpp File Reference}
+\hypertarget{client_8cpp}{}\label{client_8cpp}\index{Client/client.cpp@{Client/client.cpp}}
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$winsock.\+h$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include "{}../\+Server/constants.\+h"{}}\newline
+{\ttfamily \#include "{}File\+Reader.\+h"{}}\newline
+{\ttfamily \#include "{}Parser.\+h"{}}\newline
+{\ttfamily \#include "{}Serializer.\+h"{}}\newline
+Include dependency graph for client.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{client_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{client_8cpp_adfc8f90f3a8caa8423099cf36ff214f1}{\+\_\+\+WINSOCK\+\_\+\+DEPRECATED\+\_\+\+NO\+\_\+\+WARNINGS}}
+\item 
+\#define \mbox{\hyperlink{client_8cpp_a78e9e036067c59e55d9d368586b84817}{PKT\+\_\+\+OFFSET\+\_\+\+TO\+\_\+\+FUEL}}~\mbox{\hyperlink{constants_8h_aa47d3a9a3e6758fef4c4b1d34e64c473}{PKT\+\_\+\+SIZE\+\_\+\+FLAG}} + \mbox{\hyperlink{constants_8h_ada9b11214b5658a9142708f57a55fa42}{PKT\+\_\+\+SIZE\+\_\+\+DAY}} + \mbox{\hyperlink{constants_8h_a7f3c8b17e7cdf63635e18cc0481e5694}{PKT\+\_\+\+SIZE\+\_\+\+MONTH}} + \mbox{\hyperlink{constants_8h_a5f8a2400736f3418172a1a408701f706}{PKT\+\_\+\+SIZE\+\_\+\+YEAR}} + \mbox{\hyperlink{constants_8h_a7e6dff54b6beda52188d321841802116}{PKT\+\_\+\+SIZE\+\_\+\+MINUTES}} + \mbox{\hyperlink{constants_8h_a50b3dfab0e3aa2bd98815ca0583f96d0}{PKT\+\_\+\+SIZE\+\_\+\+MERIDIAN}} + \mbox{\hyperlink{constants_8h_a7a64660aff39c1eb0674806299b7074b}{PKT\+\_\+\+SIZE\+\_\+\+HOUR}} + \mbox{\hyperlink{constants_8h_a677832d9019a3179c01ddbb9ba8f5d1b}{PKT\+\_\+\+SIZE\+\_\+\+SECONDS}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{client_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{client_8cpp_adfc8f90f3a8caa8423099cf36ff214f1}\label{client_8cpp_adfc8f90f3a8caa8423099cf36ff214f1} 
+\index{client.cpp@{client.cpp}!\_WINSOCK\_DEPRECATED\_NO\_WARNINGS@{\_WINSOCK\_DEPRECATED\_NO\_WARNINGS}}
+\index{\_WINSOCK\_DEPRECATED\_NO\_WARNINGS@{\_WINSOCK\_DEPRECATED\_NO\_WARNINGS}!client.cpp@{client.cpp}}
+\doxysubsubsection{\texorpdfstring{\_WINSOCK\_DEPRECATED\_NO\_WARNINGS}{\_WINSOCK\_DEPRECATED\_NO\_WARNINGS}}
+{\footnotesize\ttfamily \#define \+\_\+\+WINSOCK\+\_\+\+DEPRECATED\+\_\+\+NO\+\_\+\+WARNINGS}
+
+\Hypertarget{client_8cpp_a78e9e036067c59e55d9d368586b84817}\label{client_8cpp_a78e9e036067c59e55d9d368586b84817} 
+\index{client.cpp@{client.cpp}!PKT\_OFFSET\_TO\_FUEL@{PKT\_OFFSET\_TO\_FUEL}}
+\index{PKT\_OFFSET\_TO\_FUEL@{PKT\_OFFSET\_TO\_FUEL}!client.cpp@{client.cpp}}
+\doxysubsubsection{\texorpdfstring{PKT\_OFFSET\_TO\_FUEL}{PKT\_OFFSET\_TO\_FUEL}}
+{\footnotesize\ttfamily \#define PKT\+\_\+\+OFFSET\+\_\+\+TO\+\_\+\+FUEL~\mbox{\hyperlink{constants_8h_aa47d3a9a3e6758fef4c4b1d34e64c473}{PKT\+\_\+\+SIZE\+\_\+\+FLAG}} + \mbox{\hyperlink{constants_8h_ada9b11214b5658a9142708f57a55fa42}{PKT\+\_\+\+SIZE\+\_\+\+DAY}} + \mbox{\hyperlink{constants_8h_a7f3c8b17e7cdf63635e18cc0481e5694}{PKT\+\_\+\+SIZE\+\_\+\+MONTH}} + \mbox{\hyperlink{constants_8h_a5f8a2400736f3418172a1a408701f706}{PKT\+\_\+\+SIZE\+\_\+\+YEAR}} + \mbox{\hyperlink{constants_8h_a7e6dff54b6beda52188d321841802116}{PKT\+\_\+\+SIZE\+\_\+\+MINUTES}} + \mbox{\hyperlink{constants_8h_a50b3dfab0e3aa2bd98815ca0583f96d0}{PKT\+\_\+\+SIZE\+\_\+\+MERIDIAN}} + \mbox{\hyperlink{constants_8h_a7a64660aff39c1eb0674806299b7074b}{PKT\+\_\+\+SIZE\+\_\+\+HOUR}} + \mbox{\hyperlink{constants_8h_a677832d9019a3179c01ddbb9ba8f5d1b}{PKT\+\_\+\+SIZE\+\_\+\+SECONDS}}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{client_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{client_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{client.cpp@{client.cpp}!main@{main}}
+\index{main@{main}!client.cpp@{client.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+~\newline
+ 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{client_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}

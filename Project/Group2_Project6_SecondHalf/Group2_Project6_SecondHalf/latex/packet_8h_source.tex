@@ -1,0 +1,44 @@
+\doxysection{packet.\+h}
+\hypertarget{packet_8h_source}{}\label{packet_8h_source}\index{Server/packet.h@{Server/packet.h}}
+\mbox{\hyperlink{packet_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{constants_8h}{constants.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_packet}{Packet}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_packet_1_1_b_o_d_y}{BODY}}\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Byte\ 1}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_packet_1_1_b_o_d_y_afcbc24f6a10fe877c4ef7247dc83d39b}{day}}\ :\ \mbox{\hyperlink{constants_8h_ada9b11214b5658a9142708f57a55fa42}{PKT\_SIZE\_DAY}};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_packet_1_1_b_o_d_y_a59533eca400a99e9692b9a4efda4c0be}{month}}\ :\ \mbox{\hyperlink{constants_8h_a7f3c8b17e7cdf63635e18cc0481e5694}{PKT\_SIZE\_MONTH}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_packet_1_1_b_o_d_y_a5125e0a292d1d425b1d039011e4f1768}{year}}\ :\ \mbox{\hyperlink{constants_8h_a5f8a2400736f3418172a1a408701f706}{PKT\_SIZE\_YEAR}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_packet_1_1_b_o_d_y_a54273346d549ba4317362d006c1fe4d2}{minutes}}\ :\ \mbox{\hyperlink{constants_8h_a7e6dff54b6beda52188d321841802116}{PKT\_SIZE\_MINUTES}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_packet_1_1_b_o_d_y_aefe014f14c7970a76c3e6a66d84f0b12}{meridian}}\ :\ \mbox{\hyperlink{constants_8h_a50b3dfab0e3aa2bd98815ca0583f96d0}{PKT\_SIZE\_MERIDIAN}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Byte\ 2\ -\/>\ 2.5}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_packet_1_1_b_o_d_y_adf0fe954d2e5fd864b43363542c15d17}{hour}}\ :\ \mbox{\hyperlink{constants_8h_a7a64660aff39c1eb0674806299b7074b}{PKT\_SIZE\_HOUR}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_packet_1_1_b_o_d_y_a7ea3d46d9c1e4265298aa8c46f6fc78a}{seconds}}\ :\ \mbox{\hyperlink{constants_8h_a677832d9019a3179c01ddbb9ba8f5d1b}{PKT\_SIZE\_SECONDS}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Byte\ 2.5\ -\/>\ 3.5}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_packet_1_1_b_o_d_y_a8a90384418a8aef0e77d693675b0e909}{fuelData}}\ :\ \mbox{\hyperlink{constants_8h_a8d47165f5fa3f2e2c2fa478010296aab}{PKT\_SIZE\_FUEL}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \}\ \mbox{\hyperlink{class_packet_a9408de768bc89546ad114f44b83d7e1d}{Body}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_packet_aabcfb963c0d5bc0fa554668f92989622}{Packet}}()}
+\DoxyCodeLine{00034\ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ header\ information}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ memset(\&this-\/>\mbox{\hyperlink{class_packet_a9408de768bc89546ad114f44b83d7e1d}{Body}},\ 0,\ \textcolor{keyword}{sizeof}(this-\/>\mbox{\hyperlink{class_packet_a9408de768bc89546ad114f44b83d7e1d}{Body}}));}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \};}
+
+\end{DoxyCode}

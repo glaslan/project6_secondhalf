@@ -1,0 +1,77 @@
+\doxysection{Server/server.cpp File Reference}
+\hypertarget{server_8cpp}{}\label{server_8cpp}\index{Server/server.cpp@{Server/server.cpp}}
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$winsock.\+h$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include "{}constants.\+h"{}}\newline
+{\ttfamily \#include "{}Deserializer.\+h"{}}\newline
+{\ttfamily \#include "{}Logger.\+h"{}}\newline
+{\ttfamily \#include "{}Fuel\+Usage\+Calculator.\+h"{}}\newline
+Include dependency graph for server.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{server_8cpp_af2286298cad439594cd8e1e74c58e186}{Server\+Thread}} (int Server\+Socket, int Connection\+Socket)
+\item 
+int \mbox{\hyperlink{server_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{server_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{server_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{server.cpp@{server.cpp}!main@{main}}
+\index{main@{main}!server.cpp@{server.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+~\newline
+ 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{server_8cpp_af2286298cad439594cd8e1e74c58e186}\label{server_8cpp_af2286298cad439594cd8e1e74c58e186} 
+\index{server.cpp@{server.cpp}!ServerThread@{ServerThread}}
+\index{ServerThread@{ServerThread}!server.cpp@{server.cpp}}
+\doxysubsubsection{\texorpdfstring{ServerThread()}{ServerThread()}}
+{\footnotesize\ttfamily void Server\+Thread (\begin{DoxyParamCaption}\item[{int}]{Server\+Socket,  }\item[{int}]{Connection\+Socket }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Server\+Socket} & \\
+\hline
+{\em Connection\+Socket} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{server_8cpp_af2286298cad439594cd8e1e74c58e186_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{server_8cpp_af2286298cad439594cd8e1e74c58e186_icgraph}
+\end{center}
+\end{figure}

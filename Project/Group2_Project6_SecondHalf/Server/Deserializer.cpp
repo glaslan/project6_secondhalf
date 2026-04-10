@@ -5,6 +5,9 @@
 #include "Deserializer.h"
 #include "constants.h"
 
+/// @brief 
+/// @param buffer 
+
 void Deserializer::DeserializeBuffer(char* buffer) {
 
 	int offset = 0;
@@ -57,13 +60,22 @@ void Deserializer::DeserializeBuffer(char* buffer) {
 	this->fuel = fuel;
 }
 
+/// @brief 
+/// @return 
+
 float Deserializer::GetFuel() {
 	return this->fuel;
 }
 
+/// @brief 
+/// @return 
+
 int Deserializer::GetFlag() {
 	return this->flag;
 }
+
+/// @brief 
+/// @return 
 
 std::string Deserializer::GetDatetime() {
 	return this->datetime;

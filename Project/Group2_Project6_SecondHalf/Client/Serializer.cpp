@@ -6,11 +6,17 @@
 #include "Serializer.h"
 #include "Parser.h"
 
+/// @brief 
+
 Serializer::Serializer() {
 	// create buffer and cleer memory
 	this->buffer = (char*)malloc(BUFFER_SIZE);
 	memset(this->buffer, 0, BUFFER_SIZE);
 }
+
+/// @brief 
+/// @param datetime 
+/// @param fuel 
 
 void Serializer::Serialize(std::string datetime, float fuel) {
 
@@ -21,10 +27,15 @@ void Serializer::Serialize(std::string datetime, float fuel) {
 	this->SerializeFuel(fuel);
 }
 
+/// @brief 
+
 void Serializer::SerializeEndPacket() {
 	memset(this->buffer, 0, BUFFER_SIZE);
 	this->SerializeFlag(FLAG_END);
 }
+
+/// @brief 
+/// @param datetime 
 
 void Serializer::SerializeDatetime(std::string datetime) {
 
@@ -101,18 +112,29 @@ void Serializer::SerializeDatetime(std::string datetime) {
 
 }
 
+/// @brief 
+/// @param fuel 
+
 void Serializer::SerializeFuel(float fuel) {
 	memcpy(this->buffer + PKT_OFFSET_TO_FUEL, &fuel, PKT_SIZE_FUEL);
 	memset(this->buffer + PKT_OFFSET_TO_FUEL + sizeof(float), '\0', PKT_SIZE_FUEL);
 }
 
+/// @brief 
+/// @param flag 
+
 void Serializer::SerializeFlag(unsigned char flag) {
 	memcpy(this->buffer, &flag, PKT_SIZE_FLAG);
 }
 
+/// @brief 
+/// @return 
+
 char* Serializer::GetBuffer() {
 	return this->buffer;
 }
+
+/// @brief 
 
 Serializer::~Serializer() {
 	memset(this->buffer, 0, BUFFER_SIZE);

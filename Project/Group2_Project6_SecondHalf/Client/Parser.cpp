@@ -1,6 +1,7 @@
 
 #include "Parser.h"
 
+/// @brief
 
 // copied pasted from old assignment will be used in parser class
 std::vector<std::string> Parser::split(std::string buffer, char delimiter) {

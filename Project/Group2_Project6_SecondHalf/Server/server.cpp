@@ -16,6 +16,9 @@
 #pragma warning(disable : 4996)
 #pragma comment(lib, "ws2_32.lib")
 
+/// @brief 
+/// @param ServerSocket 
+/// @param ConnectionSocket 
 
 void ServerThread(int ServerSocket, int ConnectionSocket) {
 
@@ -61,6 +64,9 @@ void ServerThread(int ServerSocket, int ConnectionSocket) {
     }
     closesocket(ConnectionSocket);
 }
+
+/// @brief 
+/// @return 
 
 int main() {
 

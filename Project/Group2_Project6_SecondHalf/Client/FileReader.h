@@ -4,6 +4,8 @@
 #include <fstream>
 #include <string>
 
+/// @brief 
+
 class Reader {
     std::string filename;
     std::ifstream file;

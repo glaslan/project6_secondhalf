@@ -1,5 +1,9 @@
 #include "Logger.h"
 
+/// @brief 
+/// @param path 
+/// @param errorpath 
+
 Logger::Logger(std::string path, std::string errorpath) {
 
 	std::ifstream logpath(path); 
@@ -19,11 +23,16 @@ Logger::Logger(std::string path, std::string errorpath) {
 		std::cerr << "Error opening Error file\n";
 }
 
+/// @brief 
+
 Logger::~Logger() {
 	logfilePtr.close();
 	errorfilePtr.close();
 }
 
+/// @brief 
+/// @param line 
+/// @return 
 
 bool Logger::WriteToFile(std::string line){
 	if (!logfilePtr.is_open()) {
@@ -36,6 +45,9 @@ bool Logger::WriteToFile(std::string line){
 	return true;
 }
 
+/// @brief 
+/// @param error 
+/// @return 
 
 bool Logger::WriteError(std::string error) {
 	if (!errorfilePtr.is_open()) {

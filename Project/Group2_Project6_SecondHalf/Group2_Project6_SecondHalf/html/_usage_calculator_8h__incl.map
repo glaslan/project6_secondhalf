@@ -1,0 +1,7 @@
+<map id="Server/UsageCalculator.h" name="Server/UsageCalculator.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,177,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="10,80,81,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,31,64,68,59,65,81,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="105,80,170,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="100,30,124,67,119,67,98,35"/>
+</map>
