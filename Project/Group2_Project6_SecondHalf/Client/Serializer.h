@@ -2,12 +2,10 @@
 
 #include <winsock.h> 
 
-#include "../Server/packet.h"
 #include "../Server/constants.h"
 
 class Serializer {
 
-	Packet packet;
 	char* buffer;
 
 public:
