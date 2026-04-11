@@ -1,6 +1,6 @@
 #include "FileReader.h"
 
-/// @brief 
+/// @brief Constructor that accepts a filename to read from.
 /// 
 /// 
 /// 
@@ -11,11 +11,11 @@ Reader::Reader(std::string filename) {
     this->file.open(filename);
 }
 
-/// @brief 
+/// @brief Reads a single line from the file specified in the constructor
 /// 
 /// 
 /// 
-/// @return 
+/// @return line from file
 
 std::string Reader::ReadLine() {
     std::string line;
@@ -23,17 +23,17 @@ std::string Reader::ReadLine() {
     return line;
 }
 
-/// @brief 
+/// @brief Checks to see if the file is open or at EOF
 /// 
 /// 
 /// 
-/// @return 
+/// @return true if file is open and not EOF
 
 bool Reader::IsOpen() {
     return this->file.is_open() && !this->file.eof();
 }
 
-/// @brief 
+/// @brief Deconstructor that closes the opened file
 
 Reader::~Reader() {
     if (this->file.is_open()) {
