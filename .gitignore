@@ -2,6 +2,7 @@
 # Prerequisites
 *.d
 *.vs
+*.txt
 
 # Compiled Object files
 *.slo
