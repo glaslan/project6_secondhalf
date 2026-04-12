@@ -16,7 +16,7 @@
 #pragma warning(disable : 4996)
 #pragma comment(lib, "ws2_32.lib")
 
-/// @brief 
+/// @brief Creates a thread for each connection
 /// @param ServerSocket 
 /// @param ConnectionSocket 
 
@@ -65,8 +65,8 @@ void ServerThread(int ServerSocket, int ConnectionSocket) {
     closesocket(ConnectionSocket);
 }
 
-/// @brief 
-/// @return 
+/// @brief Main entry point for the server.
+/// @return 0
 
 int main() {
 
