@@ -1,8 +1,6 @@
 #include <cstring>
-#include <fstream>
 #include <iostream>
 #include <thread>
-#include <vector>
 #include <windows.h> 
 #include <winsock.h> 
 #include <ctime>
