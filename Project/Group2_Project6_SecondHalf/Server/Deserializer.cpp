@@ -43,19 +43,19 @@ void Deserializer::DeserializeBuffer(char* buffer) {
 
 	// concatenate values into final datetime string to be displayed nicely
 
-	this.stream << day << "/" << month << "/" << year << " ";
+	this->stream << day << "/" << month << "/" << year << " ";
 	if (meridian == '1') {
-		this.stream << "PM ";
+		this->stream << "PM ";
 	}
 	else {
-		this.stream << "AM ";
+		this->stream << "AM ";
 	}
 	stream << hour << ":" << minute << ":" << second;
 
 	// set values
-	this->datetime = this.stream.str();
+	this->datetime = this->stream.str();
 	this->fuel = fuel;
-	this.stream.clear();
+	this->stream.clear();
 }
 
 /// @brief Returns the value of the private member, fuel

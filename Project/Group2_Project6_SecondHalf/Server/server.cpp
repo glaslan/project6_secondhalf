@@ -70,11 +70,11 @@ void ServerThread(int ServerSocket, int ConnectionSocket) {
 int main() {
 
     WSADATA wsaData;
-    Logger* main_logger("./log.txt", "./errorlog.txt");
+    Logger* main_logger = new Logger("./log.txt", "./errorlog.txt");
 
     if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
         std::cout << "ERROR: Failed to start WSA" << std::endl;
-        main_logger.WriteError("ERROR: Failed to start WSA");
+        main_logger->WriteError("ERROR: Failed to start WSA");
         return 0;
     }
 
@@ -85,7 +85,7 @@ int main() {
     ServerSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (ServerSocket < 0) {
         std::cout << "ERROR: Failed to create ServerSocket" << std::endl;
-        main_logger.WriteError("ERROR: Failed to create ServerSocket");
+        main_logger->WriteError("ERROR: Failed to create ServerSocket");
         return 0;
     }
 
@@ -97,14 +97,14 @@ int main() {
     if (bind(ServerSocket, (struct sockaddr*)&SvrAddr, sizeof(SvrAddr)) == -1) {
         closesocket(ServerSocket);
         std::cout << "ERROR: Failed to bind ServerSocket" << std::endl;
-        main_logger.WriteError("ERROR: Failed to bind ServerSocket");
+        main_logger->WriteError("ERROR: Failed to bind ServerSocket");
         return 0;
     }
 
     // wait for a incoming connection
     if (listen(ServerSocket, 1) == -1) {
         std::cout << "ERROR: listen failed to configure ServerSocket" << std::endl;
-        main_logger.WriteError("ERROR: listen failed to configure ServerSocket");
+        main_logger->WriteError("ERROR: listen failed to configure ServerSocket");
         
     }
     int ConnectionSocket;
