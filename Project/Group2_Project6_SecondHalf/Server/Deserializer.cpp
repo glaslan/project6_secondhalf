@@ -51,8 +51,6 @@ void Deserializer::DeserializeBuffer(char* buffer) {
 		this.stream << "AM ";
 	}
 	stream << hour << ":" << minute << ":" << second;
-	std::cout << stream.str() << std::endl;
-	std::cout << fuel;
 
 	// set values
 	this->datetime = this.stream.str();
@@ -67,15 +65,15 @@ float Deserializer::GetFuel() {
 	return this->fuel;
 }
 
-/// @brief 
-/// @return 
+/// @brief Returns the finished flag
+/// @return flag
 
 int Deserializer::GetFlag() {
 	return this->flag;
 }
 
-/// @brief 
-/// @return 
+/// @brief Returns the date and time
+/// @return datetime
 
 std::string Deserializer::GetDatetime() {
 	return this->datetime;
