@@ -6,7 +6,7 @@
 #include "Serializer.h"
 #include "Parser.h"
 
-/// @brief 
+/// @brief constructor for serializer, alocates memory for buffer
 
 Serializer::Serializer() {
 	// create buffer and cleer memory
@@ -14,9 +14,9 @@ Serializer::Serializer() {
 	memset(this->buffer, 0, BUFFER_SIZE);
 }
 
-/// @brief 
-/// @param datetime 
-/// @param fuel 
+/// @brief adds continue flag, datetime and fuel into buffer to be sent
+/// @param datetime datetime to put into buffer
+/// @param fuel fuel to put into buffer
 
 void Serializer::Serialize(std::string datetime, float fuel) {
 
@@ -27,15 +27,15 @@ void Serializer::Serialize(std::string datetime, float fuel) {
 	this->SerializeFuel(fuel);
 }
 
-/// @brief 
+/// @brief clears buffer and sets flag to EndPacket to be sent
 
 void Serializer::SerializeEndPacket() {
 	memset(this->buffer, 0, BUFFER_SIZE);
 	this->SerializeFlag(FLAG_END);
 }
 
-/// @brief 
-/// @param datetime 
+/// @brief adds datetime into buffer
+/// @param datetime datetime to put into buffer
 
 void Serializer::SerializeDatetime(std::string datetime) {
 
@@ -110,29 +110,28 @@ void Serializer::SerializeDatetime(std::string datetime) {
 
 }
 
-/// @brief 
-/// @param fuel 
+/// @brief puts fuel into buffer
+/// @param fuel fuel to put into buffer
 
 void Serializer::SerializeFuel(float fuel) {
 	memcpy(this->buffer + PKT_OFFSET_TO_FUEL, &fuel, PKT_SIZE_FUEL);
-	memset(this->buffer + PKT_OFFSET_TO_FUEL + sizeof(float), '\0', PKT_SIZE_FUEL);
 }
 
-/// @brief 
-/// @param flag 
+/// @brief puts flag into buffer
+/// @param flag flag to put into buffer
 
 void Serializer::SerializeFlag(unsigned char flag) {
 	memcpy(this->buffer, &flag, PKT_SIZE_FLAG);
 }
 
-/// @brief 
-/// @return 
+/// @brief gets the pointer to the buffer to be used to send 
+/// @return char* buffer
 
 char* Serializer::GetBuffer() {
 	return this->buffer;
 }
 
-/// @brief 
+/// @brief deallocates buffer 
 
 Serializer::~Serializer() {
 	memset(this->buffer, 0, BUFFER_SIZE);

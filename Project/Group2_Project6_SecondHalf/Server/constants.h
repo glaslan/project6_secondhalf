@@ -3,7 +3,7 @@
 /// @brief
 
 #define PORT 18000
-#define BUFFER_SIZE 32
+#define BUFFER_SIZE 20
 
 #define PKT_SIZE_FLAG 1
 #define PKT_SIZE_DAY 2
