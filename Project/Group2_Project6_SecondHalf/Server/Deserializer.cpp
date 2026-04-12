@@ -52,8 +52,6 @@ void Deserializer::DeserializeBuffer(char* buffer) {
 		stream << "AM ";
 	}
 	stream << hour << ":" << minute << ":" << second;
-	std::cout << stream.str() << std::endl;
-	std::cout << fuel;
 
 	// set values
 	this->datetime = stream.str();

@@ -108,8 +108,6 @@ void Serializer::SerializeDatetime(std::string datetime) {
 	memcpy(this->buffer + offset, second.c_str(), PKT_SIZE_SECONDS);
 	offset += PKT_SIZE_SECONDS; 
 
-	std::cout << this->buffer;
-
 }
 
 /// @brief 
