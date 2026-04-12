@@ -50,8 +50,8 @@ void Deserializer::DeserializeBuffer(char* buffer) {
 	else {
 		this.stream << "AM ";
 	}
-	this.stream << hour << ":" << minute << ":" << second;
-	std::cout << this.stream.str() << std::endl;
+	stream << hour << ":" << minute << ":" << second;
+	std::cout << stream.str() << std::endl;
 	std::cout << fuel;
 
 	// set values

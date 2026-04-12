@@ -111,6 +111,8 @@ int main() {
     }
     int ConnectionSocket;
 
+    std::cout << "Wating for connections..." << std::endl;
+
     while (true) {
 
         if ((ConnectionSocket = accept(ServerSocket, NULL, NULL)) == -1) {
