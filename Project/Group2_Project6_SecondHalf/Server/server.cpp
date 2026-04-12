@@ -45,7 +45,8 @@ void ServerThread(int ServerSocket, int ConnectionSocket) {
         deserializer.DeserializeBuffer(buffer);
         int flag = deserializer.GetFlag();
    
-        switch (flag) {
+        try {
+            switch (flag) {
             case FLAG_CONTINUE:
                 calculator.process_fuel_data(deserializer.GetFuel());
                 stream << "Time: " << deserializer.GetDatetime() << ", Average Fuel Used: " << calculator.getAverageConsumption() << ", Current Fuel Used: " << calculator.getRecentDifference();
@@ -55,9 +56,12 @@ void ServerThread(int ServerSocket, int ConnectionSocket) {
                 quit = true;
                 break;
             default:
-                std::cout << "Bad Input" << std::endl;
                 quit = true;
                 break;
+            }
+        }
+        catch (std::exception error) {
+            logger.WriteError(error.what());
         }
         stream.clear();
     }

@@ -6,19 +6,20 @@
 
 Logger::Logger(std::string path, std::string errorpath) {
 	logfilePtr.open(path.c_str(), std::ios::out | std::ios::app);
-	errorfilePtr.open(errorpath.c_str(), std::ios::out | std::ios::app);
+	// errorfilePtr.open(errorpath.c_str(), std::ios::out | std::ios::app);
 
 	if (!logfilePtr.is_open())
 		std::cerr << "Error opening Log file\n";
-	if (!errorfilePtr.is_open())
-		std::cerr << "Error opening Error file\n";
+	// we are not using the error file so might as well not open an extra file
+	//if (!errorfilePtr.is_open())
+	//	std::cerr << "Error opening Error file\n";
 }
 
 /// @brief Deconstructor that closes the two files
 
 Logger::~Logger() {
 	logfilePtr.close();
-	errorfilePtr.close();
+	// errorfilePtr.close();
 }
 
 /// @brief Writes a line to the log file.
