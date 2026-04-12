@@ -93,11 +93,7 @@ int main() {
             continue;
         }
 
-        std::cout << "Serialize Packet" << std::endl;
-
         serializer.Serialize(datetime, fuel_usage);
-        
-        std::cout << "Send Packet: " << serializer.GetBuffer() << std::endl;
         
         send(ClientSocket, serializer.GetBuffer(), BUFFER_SIZE, 0);
 
