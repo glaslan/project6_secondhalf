@@ -9,6 +9,7 @@ class Deserializer {
 	std::string datetime;
 	float fuel;
 	unsigned char flag;
+	std::stringstream stream;
 
 public:
 

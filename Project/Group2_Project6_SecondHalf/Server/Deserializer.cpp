@@ -5,7 +5,7 @@
 #include "Deserializer.h"
 #include "constants.h"
 
-/// @brief 
+/// @brief Moves information from a buffer to the private members of the deserializer
 /// @param buffer 
 
 void Deserializer::DeserializeBuffer(char* buffer) {
@@ -42,26 +42,26 @@ void Deserializer::DeserializeBuffer(char* buffer) {
 	offset += PKT_SIZE_FUEL;
 
 	// concatenate values into final datetime string to be displayed nicely
-	std::stringstream stream;
 
-	stream << day << "/" << month << "/" << year << " ";
+	this.stream << day << "/" << month << "/" << year << " ";
 	if (meridian == '1') {
-		stream << "PM ";
+		this.stream << "PM ";
 	}
 	else {
-		stream << "AM ";
+		this.stream << "AM ";
 	}
-	stream << hour << ":" << minute << ":" << second;
-	std::cout << stream.str() << std::endl;
+	this.stream << hour << ":" << minute << ":" << second;
+	std::cout << this.stream.str() << std::endl;
 	std::cout << fuel;
 
 	// set values
-	this->datetime = stream.str();
+	this->datetime = this.stream.str();
 	this->fuel = fuel;
+	this.stream.clear();
 }
 
-/// @brief 
-/// @return 
+/// @brief Returns the value of the private member, fuel
+/// @return fuel
 
 float Deserializer::GetFuel() {
 	return this->fuel;
