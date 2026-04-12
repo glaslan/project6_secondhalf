@@ -6,6 +6,7 @@
 #include "Serializer.h"
 #include "Deserializer.h"
 #include "FileReader.h"
+#include "FuelUsageCalculator.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -164,6 +165,86 @@ namespace UnitTests
 			Assert::AreEqual(ds.GetFlag(), 1);
 		}
 
+		// File Reader test
+
+		TEST_METHOD(TEST_FR_FUNC_0001) {
+
+			const std::string testFileName = "test_telemetry_file.txt";
+			const std::string expectedLine = "12_3_2023 14:56:47,47.865124,";
+
+			// Create temporary test file
+			{
+				std::ofstream out(testFileName);
+				Assert::IsTrue(out.is_open(), L"Failed to create temporary test file.");
+				out << expectedLine << '\n';
+				out << "12_3_2023 14:56:48,47.865021," << '\n';
+			}
+
+			Reader reader(testFileName);
+
+			Assert::IsTrue(reader.IsOpen());
+
+			std::string actualLine = reader.ReadLine();
+
+			Assert::AreEqual(expectedLine, actualLine);
+
+			// Cleanup
+			std::remove(testFileName.c_str());
+
+		}
+
+		// Usage calculator tests
+		TEST_METHOD(TEST_FC_FUNC_0001) 
+		{
+			UsageCalculator calculator(100.0f);
+			float recentDifference = calculator.getRecentDifference();
+			
+			float averageConsumption = calculator.getAverageConsumption();
+			Assert::AreEqual(0.0f, recentDifference);
+			Assert::AreEqual(0.0f, averageConsumption);
+
+		}
+
+		TEST_METHOD(TEST_FC_FUNC_0002)
+		{
+			UsageCalculator calculator(50.0f);
+
+			calculator.process_fuel_data(49.5f);
+
+			float recentDifference = calculator.getRecentDifference();
+			float averageConsumption = calculator.getAverageConsumption();
+
+			Assert::AreEqual(0.0f, recentDifference);
+			Assert::AreEqual(0.0f, averageConsumption);
+		}
+
+		TEST_METHOD(TEST_FC_FUNC_0003)
+		{
+			UsageCalculator calculator(50.0f);
+
+			calculator.process_fuel_data(50.5f);
+
+			float averageConsumption = calculator.getAverageConsumption();
+			float recentDifference = calculator.getRecentDifference();
+
+			Assert::AreEqual(0.0f, averageConsumption);
+			Assert::AreEqual(0.0f, recentDifference);
+		}
+
+		TEST_METHOD(TEST_FC_FUNC_0004)
+		{
+			UsageCalculator calculator(10.0);
+
+			calculator.process_fuel_data(9.9);
+			calculator.process_fuel_data(9.8);
+			calculator.process_fuel_data(9.7);
+
+			float recentDifference = calculator.getRecentDifference();
+			Assert::AreEqual(0.1f, recentDifference, 0.0001f);
+			float averageConsumption = calculator.getAverageConsumption();
+			Assert::AreEqual(0.1f, averageConsumption, 0.0001f);
+			
+		}
 
 	};
 }
