@@ -36,17 +36,17 @@ void ServerThread(int ServerSocket, int ConnectionSocket) {
     Logger logger(log_path, error_path);
     Deserializer deserializer;
     UsageCalculator calculator(0);
-
+    std::stringstream stream;
     // This block makes the data move
     // Recieve must come first
     bool quit = false;
     while (!quit) {
+        stream.str("");
         int bytes = recv(ConnectionSocket, buffer, sizeof(buffer), 0);
         if (bytes <= 0) break;
         deserializer.DeserializeBuffer(buffer);
         int flag = deserializer.GetFlag();
-        std::stringstream stream;
-        
+   
         switch (flag) {
             case FLAG_CONTINUE:
                 calculator.process_fuel_data(deserializer.GetFuel());
@@ -61,6 +61,7 @@ void ServerThread(int ServerSocket, int ConnectionSocket) {
                 quit = true;
                 break;
         }
+        stream.clear();
     }
     closesocket(ConnectionSocket);
 }
