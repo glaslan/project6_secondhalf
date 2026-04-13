@@ -1,6 +1,6 @@
 #include "FuelUsageCalculator.h"
 
-/// @brief 
+/// @brief Constructor that initializes the fuel usage calculator with an initial fuel level.
 /// 
 /// 
 /// 
@@ -15,7 +15,7 @@ UsageCalculator::UsageCalculator(float initial_fuel) {
 	has_first_reading = false;
 }
 
-/// @brief 
+/// @brief Processes new fuel level data, updating the total consumed fuel and time intervals accordingly.
 /// 
 /// 
 /// 
@@ -42,7 +42,7 @@ void UsageCalculator::process_fuel_data(float new_level) {
 	previous_fuel = current_fuel;
 }
 
-/// @brief 
+/// @brief Returns the most recent difference in fuel level, which represents the fuel consumed since the last reading.
 /// 
 /// 
 /// 
@@ -52,7 +52,7 @@ float UsageCalculator::getRecentDifference() const {
     return recent_difference;
 }
 
-/// @brief 
+/// @brief Calculates and returns the average fuel consumption based on the total consumed fuel and the number of time intervals recorded.
 /// 
 /// 
 /// 

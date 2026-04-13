@@ -1,5 +1,5 @@
 <map id="UsageCalculator::getRecentDifference" name="UsageCalculator::getRecentDifference">
-<area shape="rect" id="Node000001" title=" " alt="" coords="321,23,507,65"/>
+<area shape="rect" id="Node000001" title="Returns the most recent difference in fuel level, which represents the fuel consumed since the last r..." alt="" coords="321,23,507,65"/>
 <area shape="rect" id="Node000002" href="$server_8cpp.html#af2286298cad439594cd8e1e74c58e186" title="Creates a thread for each connection." alt="" coords="138,5,238,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="303,32,238,27,238,22,308,31"/>
 <area shape="rect" id="Node000004" href="$namespace_unit_tests.html#a36ae281314df9ffad80c4fc259305e4a" title=" " alt="" coords="103,56,273,83"/>

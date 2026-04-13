@@ -2,19 +2,24 @@
 \hypertarget{class_usage_calculator}{}\label{class_usage_calculator}\index{UsageCalculator@{UsageCalculator}}
 
 
+Class that calculates fuel usage based on fuel level readings over time. It keeps track of the previous and current fuel levels, total fuel consumed, and the number of time intervals for calculating average consumption.  
+
+
+
+
 {\ttfamily \#include $<$Fuel\+Usage\+Calculator.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_usage_calculator_a1038efc5c6b3a5eb1efc460e875bc214}{Usage\+Calculator}} (float initial\+\_\+fuel)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the fuel usage calculator with an initial fuel level. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_usage_calculator_a1dd2eb7792e2d7bab7f3208104130392}{process\+\_\+fuel\+\_\+data}} (float new\+\_\+level)
-\item 
+\begin{DoxyCompactList}\small\item\em Processes new fuel level data, updating the total consumed fuel and time intervals accordingly. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_usage_calculator_ab0a663dd92d3b954df352594ec13381f}{get\+Average\+Consumption}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Calculates and returns the average fuel consumption based on the total consumed fuel and the number of time intervals recorded. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_usage_calculator_ab81f12deae3a5d593fa21bcfa5dc1244}{get\+Recent\+Difference}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the most recent difference in fuel level, which represents the fuel consumed since the last reading. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_usage_calculator_abbd8f7012e62ed8f3a23e1e63d96ee7d}{Usage\+Calculator}} ()
 \item 
 \mbox{\hyperlink{class_usage_calculator_a1038efc5c6b3a5eb1efc460e875bc214}{Usage\+Calculator}} (float initial\+\_\+fuel)
@@ -27,12 +32,19 @@ float \mbox{\hyperlink{class_usage_calculator_ab81f12deae3a5d593fa21bcfa5dc1244}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Class that calculates fuel usage based on fuel level readings over time. It keeps track of the previous and current fuel levels, total fuel consumed, and the number of time intervals for calculating average consumption. 
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_usage_calculator_a1038efc5c6b3a5eb1efc460e875bc214}\label{class_usage_calculator_a1038efc5c6b3a5eb1efc460e875bc214} 
 \index{UsageCalculator@{UsageCalculator}!UsageCalculator@{UsageCalculator}}
 \index{UsageCalculator@{UsageCalculator}!UsageCalculator@{UsageCalculator}}
 \doxysubsubsection{\texorpdfstring{UsageCalculator()}{UsageCalculator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily Usage\+Calculator\+::\+Usage\+Calculator (\begin{DoxyParamCaption}\item[{float}]{initial\+\_\+fuel }\end{DoxyParamCaption})}
+
+
+
+Constructor that initializes the fuel usage calculator with an initial fuel level. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -61,6 +73,10 @@ float \mbox{\hyperlink{class_usage_calculator_ab81f12deae3a5d593fa21bcfa5dc1244}
 \doxysubsubsection{\texorpdfstring{getAverageConsumption()}{getAverageConsumption()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily float Usage\+Calculator\+::get\+Average\+Consumption (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Calculates and returns the average fuel consumption based on the total consumed fuel and the number of time intervals recorded. 
+
 \begin{DoxyReturn}{Returns}
 ~\newline
  
@@ -85,6 +101,10 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{getRecentDifference()}{getRecentDifference()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily float Usage\+Calculator\+::get\+Recent\+Difference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Returns the most recent difference in fuel level, which represents the fuel consumed since the last reading. 
+
 \begin{DoxyReturn}{Returns}
 ~\newline
  
@@ -108,6 +128,10 @@ Here is the caller graph for this function\+:
 \index{process\_fuel\_data@{process\_fuel\_data}!UsageCalculator@{UsageCalculator}}
 \doxysubsubsection{\texorpdfstring{process\_fuel\_data()}{process\_fuel\_data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void Usage\+Calculator\+::process\+\_\+fuel\+\_\+data (\begin{DoxyParamCaption}\item[{float}]{new\+\_\+level }\end{DoxyParamCaption})}
+
+
+
+Processes new fuel level data, updating the total consumed fuel and time intervals accordingly. 
 
 
 \begin{DoxyParams}{Parameters}

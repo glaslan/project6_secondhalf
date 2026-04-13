@@ -4,7 +4,8 @@
 #include <string>
 #include <ctime>
 
-/// @brief 
+/// @brief Class that calculates fuel usage based on fuel level readings over time. 
+/// It keeps track of the previous and current fuel levels, total fuel consumed, and the number of time intervals for calculating average consumption.
 
 class UsageCalculator {
 private:
