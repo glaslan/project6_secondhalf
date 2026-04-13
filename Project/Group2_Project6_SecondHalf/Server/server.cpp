@@ -22,9 +22,12 @@ void ServerThread(int ServerSocket, int ConnectionSocket) {
 
     // Accept Connection 
     std::ofstream postFile;
-    char buffer[BUFFER_SIZE] = { 0 }; 
-    std::time_t unix_time = std::time(0); 
-    
+    char buffer[BUFFER_SIZE] = { 0 };
+    std::time_t unix_time = std::time(0);
+
+    DWORD timeout = 5000;
+    setsockopt(ConnectionSocket, SOL_SOCKET, SO_RCVTIMEO, (char*)&timeout, sizeof(timeout));
+
     std::string log_path("./log" + std::to_string(unix_time) + ".txt");
     std::string error_path("./error" + std::to_string(unix_time) + ".txt");
 
@@ -41,10 +44,13 @@ void ServerThread(int ServerSocket, int ConnectionSocket) {
     while (!quit) {
         stream.str("");
         int bytes = recv(ConnectionSocket, buffer, sizeof(buffer), 0);
-        if (bytes <= 0) break;
+        if (bytes <= 0) {
+            logger.WriteError("Socket Timeout");
+            break;
+        }
         deserializer.DeserializeBuffer(buffer);
         int flag = deserializer.GetFlag();
-   
+
         try {
             switch (flag) {
             case FLAG_CONTINUE:
