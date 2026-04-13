@@ -1,0 +1,163 @@
+\doxysection{Usage\+Calculator Class Reference}
+\hypertarget{class_usage_calculator}{}\label{class_usage_calculator}\index{UsageCalculator@{UsageCalculator}}
+
+
+Class that calculates fuel usage based on fuel level readings over time. It keeps track of the previous and current fuel levels, total fuel consumed, and the number of time intervals for calculating average consumption.  
+
+
+
+
+{\ttfamily \+\#include $<$Fuel\+Usage\+Calculator.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_usage_calculator_a1038efc5c6b3a5eb1efc460e875bc214}{Usage\+Calculator}} (float initial\+\_\+fuel)
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the fuel usage calculator with an initial fuel level. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_usage_calculator_a1dd2eb7792e2d7bab7f3208104130392}{process\+\_\+fuel\+\_\+data}} (float new\+\_\+level)
+\begin{DoxyCompactList}\small\item\em Processes new fuel level data, updating the total consumed fuel and time intervals accordingly. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_usage_calculator_ab0a663dd92d3b954df352594ec13381f}{get\+Average\+Consumption}} () const
+\begin{DoxyCompactList}\small\item\em Calculates and returns the average fuel consumption based on the total consumed fuel and the number of time intervals recorded. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_usage_calculator_ab81f12deae3a5d593fa21bcfa5dc1244}{get\+Recent\+Difference}} () const
+\begin{DoxyCompactList}\small\item\em Returns the most recent difference in fuel level, which represents the fuel consumed since the last reading. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_usage_calculator_abbd8f7012e62ed8f3a23e1e63d96ee7d}{Usage\+Calculator}} ()
+\item 
+\doxymbox{\hyperlink{class_usage_calculator_a1038efc5c6b3a5eb1efc460e875bc214}{Usage\+Calculator}} (float initial\+\_\+fuel)
+\item 
+void \doxymbox{\hyperlink{class_usage_calculator_a1dd2eb7792e2d7bab7f3208104130392}{process\+\_\+fuel\+\_\+data}} (float new\+\_\+level)
+\item 
+float \doxymbox{\hyperlink{class_usage_calculator_ab0a663dd92d3b954df352594ec13381f}{get\+Average\+Consumption}} () const
+\item 
+float \doxymbox{\hyperlink{class_usage_calculator_ab81f12deae3a5d593fa21bcfa5dc1244}{get\+Recent\+Difference}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that calculates fuel usage based on fuel level readings over time. It keeps track of the previous and current fuel levels, total fuel consumed, and the number of time intervals for calculating average consumption. 
+
+\label{doc-constructors}
+\Hypertarget{class_usage_calculator_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_usage_calculator_a1038efc5c6b3a5eb1efc460e875bc214}\index{UsageCalculator@{UsageCalculator}!UsageCalculator@{UsageCalculator}}
+\index{UsageCalculator@{UsageCalculator}!UsageCalculator@{UsageCalculator}}
+\doxysubsubsection{\texorpdfstring{UsageCalculator()}{UsageCalculator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_usage_calculator_a1038efc5c6b3a5eb1efc460e875bc214} 
+Usage\+Calculator::\+\+Usage\+Calculator (\begin{DoxyParamCaption}\item[{float}]{initial\+\_\+fuel}{}\end{DoxyParamCaption})}
+
+
+
+Constructor that initializes the fuel usage calculator with an initial fuel level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em initial\+\_\+fuel} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_usage_calculator_abbd8f7012e62ed8f3a23e1e63d96ee7d}\index{UsageCalculator@{UsageCalculator}!UsageCalculator@{UsageCalculator}}
+\index{UsageCalculator@{UsageCalculator}!UsageCalculator@{UsageCalculator}}
+\doxysubsubsection{\texorpdfstring{UsageCalculator()}{UsageCalculator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_usage_calculator_abbd8f7012e62ed8f3a23e1e63d96ee7d} 
+Usage\+Calculator::\+\+Usage\+Calculator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_usage_calculator_a1038efc5c6b3a5eb1efc460e875bc214}\index{UsageCalculator@{UsageCalculator}!UsageCalculator@{UsageCalculator}}
+\index{UsageCalculator@{UsageCalculator}!UsageCalculator@{UsageCalculator}}
+\doxysubsubsection{\texorpdfstring{UsageCalculator()}{UsageCalculator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_usage_calculator_a1038efc5c6b3a5eb1efc460e875bc214} 
+Usage\+Calculator::\+\+Usage\+Calculator (\begin{DoxyParamCaption}\item[{float}]{initial\+\_\+fuel}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_usage_calculator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_usage_calculator_ab0a663dd92d3b954df352594ec13381f}\index{UsageCalculator@{UsageCalculator}!getAverageConsumption@{getAverageConsumption}}
+\index{getAverageConsumption@{getAverageConsumption}!UsageCalculator@{UsageCalculator}}
+\doxysubsubsection{\texorpdfstring{getAverageConsumption()}{getAverageConsumption()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_usage_calculator_ab0a663dd92d3b954df352594ec13381f} 
+float Usage\+Calculator::\+get\+Average\+Consumption (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculates and returns the average fuel consumption based on the total consumed fuel and the number of time intervals recorded. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_usage_calculator_ab0a663dd92d3b954df352594ec13381f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_usage_calculator_ab0a663dd92d3b954df352594ec13381f}\index{UsageCalculator@{UsageCalculator}!getAverageConsumption@{getAverageConsumption}}
+\index{getAverageConsumption@{getAverageConsumption}!UsageCalculator@{UsageCalculator}}
+\doxysubsubsection{\texorpdfstring{getAverageConsumption()}{getAverageConsumption()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_usage_calculator_ab0a663dd92d3b954df352594ec13381f} 
+float Usage\+Calculator::\+get\+Average\+Consumption (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_usage_calculator_ab81f12deae3a5d593fa21bcfa5dc1244}\index{UsageCalculator@{UsageCalculator}!getRecentDifference@{getRecentDifference}}
+\index{getRecentDifference@{getRecentDifference}!UsageCalculator@{UsageCalculator}}
+\doxysubsubsection{\texorpdfstring{getRecentDifference()}{getRecentDifference()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_usage_calculator_ab81f12deae3a5d593fa21bcfa5dc1244} 
+float Usage\+Calculator::\+get\+Recent\+Difference (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the most recent difference in fuel level, which represents the fuel consumed since the last reading. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_usage_calculator_ab81f12deae3a5d593fa21bcfa5dc1244_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_usage_calculator_ab81f12deae3a5d593fa21bcfa5dc1244}\index{UsageCalculator@{UsageCalculator}!getRecentDifference@{getRecentDifference}}
+\index{getRecentDifference@{getRecentDifference}!UsageCalculator@{UsageCalculator}}
+\doxysubsubsection{\texorpdfstring{getRecentDifference()}{getRecentDifference()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_usage_calculator_ab81f12deae3a5d593fa21bcfa5dc1244} 
+float Usage\+Calculator::\+get\+Recent\+Difference (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_usage_calculator_a1dd2eb7792e2d7bab7f3208104130392}\index{UsageCalculator@{UsageCalculator}!process\_fuel\_data@{process\_fuel\_data}}
+\index{process\_fuel\_data@{process\_fuel\_data}!UsageCalculator@{UsageCalculator}}
+\doxysubsubsection{\texorpdfstring{process\_fuel\_data()}{process\_fuel\_data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_usage_calculator_a1dd2eb7792e2d7bab7f3208104130392} 
+void Usage\+Calculator::\+process\+\_\+fuel\+\_\+data (\begin{DoxyParamCaption}\item[{float}]{new\+\_\+level}{}\end{DoxyParamCaption})}
+
+
+
+Processes new fuel level data, updating the total consumed fuel and time intervals accordingly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+level} & \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_usage_calculator_a1dd2eb7792e2d7bab7f3208104130392_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_usage_calculator_a1dd2eb7792e2d7bab7f3208104130392}\index{UsageCalculator@{UsageCalculator}!process\_fuel\_data@{process\_fuel\_data}}
+\index{process\_fuel\_data@{process\_fuel\_data}!UsageCalculator@{UsageCalculator}}
+\doxysubsubsection{\texorpdfstring{process\_fuel\_data()}{process\_fuel\_data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_usage_calculator_a1dd2eb7792e2d7bab7f3208104130392} 
+void Usage\+Calculator::\+process\+\_\+fuel\+\_\+data (\begin{DoxyParamCaption}\item[{float}]{new\+\_\+level}{}\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Server/\+\doxymbox{\hyperlink{_fuel_usage_calculator_8h}{Fuel\+Usage\+Calculator.\+h}}\item 
+Server/\+\doxymbox{\hyperlink{_usage_calculator_8h}{Usage\+Calculator.\+h}}\item 
+Server/\+\doxymbox{\hyperlink{_fuel_usage_calculator_8cpp}{Fuel\+Usage\+Calculator.\+cpp}}\item 
+Server/\+\doxymbox{\hyperlink{_usage_calculator_8cpp}{Usage\+Calculator.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,21 @@
+<map id="ServerThread" name="ServerThread">
+<area shape="rect" id="Node000001" title="Creates a thread for each connection." alt="" coords="5,240,105,267"/>
+<area shape="rect" id="Node000002" href="$class_deserializer.html#a3161e83c48efe82a2a4256a8d23b4085" title="Moves information from a buffer to the private members of the deserializer." alt="" coords="167,5,330,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,239,67,203,85,154,113,103,130,79,151,58,158,55,155,59,154,62,134,83,117,106,90,157,72,205,62,240"/>
+<area shape="rect" id="Node000003" href="$class_usage_calculator.html#ab0a663dd92d3b954df352594ec13381f" title="Calculates and returns the average fuel consumption based on the total consumed fuel and the number o..." alt="" coords="153,72,345,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="61,238,95,183,121,152,151,125,161,120,157,124,154,129,124,156,99,187,66,241"/>
+<area shape="rect" id="Node000004" href="$class_deserializer.html#a8a403f4160ad7aa570b8b3189857e12a" title="Returns the date and time." alt="" coords="163,139,335,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="68,238,104,206,151,175,169,169,165,173,154,180,107,210,72,241"/>
+<area shape="rect" id="Node000005" href="$class_deserializer.html#ac0dcc0a5b8e23fd6adbb75ac302ceeba" title="Returns the finished flag." alt="" coords="177,189,321,216"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="104,238,182,218,178,223,107,243"/>
+<area shape="rect" id="Node000006" href="$class_deserializer.html#a95e40933851b8c81461b0b5a318e2879" title="Returns the value of the private member, fuel." alt="" coords="177,240,321,267"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="104,251,163,252,159,255,106,256"/>
+<area shape="rect" id="Node000007" href="$class_usage_calculator.html#ab81f12deae3a5d593fa21bcfa5dc1244" title="Returns the most recent difference in fuel level, which represents the fuel consumed since the last r..." alt="" coords="156,291,342,333"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="101,265,164,284,160,287,102,270"/>
+<area shape="rect" id="Node000008" href="$class_usage_calculator.html#a1dd2eb7792e2d7bab7f3208104130392" title="Processes new fuel level data, updating the total consumed fuel and time intervals accordingly." alt="" coords="163,357,335,400"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="67,264,105,304,154,343,164,350,159,351,151,348,101,307,67,270"/>
+<area shape="rect" id="Node000009" href="$class_logger.html#a1d6a9d1154f77573a072ed99886f68ae" title="Writes a line to the error file." alt="" coords="186,424,312,451"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="61,265,75,296,94,335,120,376,154,410,174,423,169,423,151,414,116,379,89,338,70,299,61,270"/>
+<area shape="rect" id="Node000010" href="$class_logger.html#ae53840e06b18681cc68f444833ead18a" title="Writes a line to the log file." alt="" coords="182,475,316,501"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="59,264,70,305,87,358,114,413,133,439,154,461,170,473,165,472,151,465,129,442,110,416,82,360,65,306,58,270"/>
+</map>

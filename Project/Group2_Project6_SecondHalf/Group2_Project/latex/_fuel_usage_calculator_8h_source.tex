@@ -1,0 +1,29 @@
+\doxysection{Fuel\+Usage\+Calculator.\+h}
+\hypertarget{_fuel_usage_calculator_8h_source}{}\label{_fuel_usage_calculator_8h_source}\index{Server/FuelUsageCalculator.h@{Server/FuelUsageCalculator.h}}
+\doxymbox{\hyperlink{_fuel_usage_calculator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_usage_calculator_a1038efc5c6b3a5eb1efc460e875bc214}{UsageCalculator}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{float}\ previous\_fuel;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{float}\ current\_fuel;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{float}\ total\_consumed;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{float}\ recent\_difference;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ time\_intervals;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ has\_first\_reading;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \doxymbox{\hyperlink{class_usage_calculator_abbd8f7012e62ed8f3a23e1e63d96ee7d}{UsageCalculator}}(\textcolor{keywordtype}{float}\ initial\_fuel);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_usage_calculator_a1dd2eb7792e2d7bab7f3208104130392}{process\_fuel\_data}}(\textcolor{keywordtype}{float}\ new\_level);}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_usage_calculator_ab0a663dd92d3b954df352594ec13381f}{getAverageConsumption}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_usage_calculator_ab81f12deae3a5d593fa21bcfa5dc1244}{getRecentDifference}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{class_usage_calculator_abbd8f7012e62ed8f3a23e1e63d96ee7d}{UsageCalculator}}()\ :\ previous\_fuel(0.0),\ current\_fuel(0.0),\ total\_consumed(0.0),\ recent\_difference(0.0),\ time\_intervals(0),\ has\_first\_reading(false)\ \{\}}
+\DoxyCodeLine{00025\ \};}
+
+\end{DoxyCode}

@@ -1,7 +1,11 @@
 
 #include "Parser.h"
 
-/// @brief
+/// @brief Takes a string and seperates it into smaller strings that are seperated by
+/// a delimiting character
+/// @param buffer the string to split into subsets
+/// @param delimiter the character to split the string by
+/// @return std::vector<string> the list of subsets of string split by the delimiter character
 
 // copied pasted from old assignment will be used in parser class
 std::vector<std::string> Parser::split(std::string buffer, char delimiter) {

@@ -1,0 +1,17 @@
+<map id="Server/constants.h" name="Server/constants.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="248,5,379,32"/>
+<area shape="rect" id="Node000002" href="$_serializer_8h.html" title=" " alt="" coords="152,80,276,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="286,40,233,82,230,77,282,43"/>
+<area shape="rect" id="Node000004" href="$client_8cpp.html" title=" " alt="" coords="5,155,121,181"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="236,38,189,57,140,82,119,99,100,119,73,156,69,152,96,116,116,96,138,78,187,52,241,35"/>
+<area shape="rect" id="Node000005" href="$_unit_tests_8cpp.html" title=" " alt="" coords="307,155,470,181"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="320,45,329,76,341,105,359,132,378,155,373,154,355,135,337,108,324,77,317,50"/>
+<area shape="rect" id="Node000006" href="$_deserializer_8cpp.html" title=" " alt="" coords="351,80,508,107"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="347,38,412,79,407,79,346,43"/>
+<area shape="rect" id="Node000007" href="$server_8cpp.html" title=" " alt="" coords="533,80,657,107"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="377,34,548,79,543,80,377,39"/>
+<area shape="rect" id="Node000003" href="$_serializer_8cpp.html" title=" " alt="" coords="144,155,283,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="216,121,216,156,211,153,212,124"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="176,115,91,156,88,152,172,112"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="259,110,360,154,355,154,258,116"/>
+</map>

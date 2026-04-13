@@ -1,0 +1,13 @@
+<map id="Server/FuelUsageCalculator.cpp" name="Server/FuelUsageCalculator.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="69,5,280,32"/>
+<area shape="rect" id="Node000002" href="$_fuel_usage_calculator_8h.html" title=" " alt="" coords="97,80,252,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,30,177,65,172,63,173,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,77,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="153,109,79,149,76,145,149,106"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="100,155,166,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="169,106,149,143,146,139,165,109"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="190,155,244,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="183,105,205,142,199,141,180,110"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="268,155,321,181"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="196,105,263,146,258,147,195,110"/>
+</map>

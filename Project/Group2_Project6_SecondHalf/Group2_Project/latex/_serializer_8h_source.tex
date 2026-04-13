@@ -1,0 +1,28 @@
+\doxysection{Serializer.\+h}
+\hypertarget{_serializer_8h_source}{}\label{_serializer_8h_source}\index{Client/Serializer.h@{Client/Serializer.h}}
+\doxymbox{\hyperlink{_serializer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <winsock.h>}\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{constants_8h}{../Server/constants.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_serializer_a9fe7f31924098f75278d059f8443fd5b}{Serializer}}\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{char}*\ buffer;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \doxymbox{\hyperlink{class_serializer_a9fe7f31924098f75278d059f8443fd5b}{Serializer}}();}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_serializer_af3452bc3dca6078161c6664811017770}{Serialize}}(std::string\ datetime,\ \textcolor{keywordtype}{float}\ fuel);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_serializer_a947792b78c1ae6fb7eea9b6289d40329}{SerializeEndPacket}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_serializer_a38bee1b71a64c6637a515bbbe0128e92}{SerializeFlag}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ flag);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_serializer_a2f3e8a72998964ebbbe6866c2a9d8d34}{SerializeDatetime}}(std::string\ datetime);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_serializer_ac01b9e1192da6d639ae1496494b76711}{SerializeFuel}}(\textcolor{keywordtype}{float}\ fuel);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{char}*\ \doxymbox{\hyperlink{class_serializer_a5de8189a4a39db4cf70169f55aad5c4e}{GetBuffer}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \doxymbox{\hyperlink{class_serializer_a42a7d2d8e622ad1ef5f869813b498aa9}{\string~Serializer}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \};}
+
+\end{DoxyCode}
