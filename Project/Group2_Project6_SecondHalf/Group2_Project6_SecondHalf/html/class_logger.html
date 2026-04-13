@@ -98,20 +98,29 @@ $(function(){initNavTree('class_logger.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 
+<p>Creates log files and writes information or errors to them.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_logger_8h_source.html">Logger.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0fa708cad28289b8eb7bc1627e3d099e" id="r_a0fa708cad28289b8eb7bc1627e3d099e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fa708cad28289b8eb7bc1627e3d099e">Logger</a> (std::string path, std::string errorpath)</td></tr>
+<tr class="memdesc:a0fa708cad28289b8eb7bc1627e3d099e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that creates and/or opens a log file and an error log file at the provided paths.  <br /></td></tr>
 <tr class="separator:a0fa708cad28289b8eb7bc1627e3d099e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb668a9e186a25fbaad2e4af6d1ed00a" id="r_acb668a9e186a25fbaad2e4af6d1ed00a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb668a9e186a25fbaad2e4af6d1ed00a">~Logger</a> ()</td></tr>
+<tr class="memdesc:acb668a9e186a25fbaad2e4af6d1ed00a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deconstructor that closes the two files.  <br /></td></tr>
 <tr class="separator:acb668a9e186a25fbaad2e4af6d1ed00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae53840e06b18681cc68f444833ead18a" id="r_ae53840e06b18681cc68f444833ead18a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae53840e06b18681cc68f444833ead18a">WriteToFile</a> (std::string data)</td></tr>
+<tr class="memdesc:ae53840e06b18681cc68f444833ead18a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a line to the log file.  <br /></td></tr>
 <tr class="separator:ae53840e06b18681cc68f444833ead18a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d6a9d1154f77573a072ed99886f68ae" id="r_a1d6a9d1154f77573a072ed99886f68ae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d6a9d1154f77573a072ed99886f68ae">WriteError</a> (std::string error)</td></tr>
+<tr class="memdesc:a1d6a9d1154f77573a072ed99886f68ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a line to the error file.  <br /></td></tr>
 <tr class="separator:a1d6a9d1154f77573a072ed99886f68ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Creates log files and writes information or errors to them. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0fa708cad28289b8eb7bc1627e3d099e" name="a0fa708cad28289b8eb7bc1627e3d099e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0fa708cad28289b8eb7bc1627e3d099e">&#9670;&#160;</a></span>Logger()</h2>
 
@@ -130,6 +139,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor that creates and/or opens a log file and an error log file at the provided paths. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td></td></tr>
@@ -156,6 +167,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Deconstructor that closes the two files. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -173,22 +186,26 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Writes a line to the error file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">error</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><br  />
- </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_logger_a1d6a9d1154f77573a072ed99886f68ae_icgraph.png" border="0" usemap="#aclass_logger_a1d6a9d1154f77573a072ed99886f68ae_icgraph" alt=""/></div>
 <map name="aclass_logger_a1d6a9d1154f77573a072ed99886f68ae_icgraph" id="aclass_logger_a1d6a9d1154f77573a072ed99886f68ae_icgraph">
-<area shape="rect" title=" " alt="" coords="103,5,229,32"/>
-<area shape="rect" href="server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="84,20,55,21,55,16,89,18"/>
+<area shape="rect" title="Writes a line to the error file." alt="" coords="250,5,376,32"/>
+<area shape="rect" href="server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main entry point for the server." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="234,21,55,21,55,16,235,16"/>
+<area shape="rect" href="server_8cpp.html#af2286298cad439594cd8e1e74c58e186" title="Creates a thread for each connection." alt="" coords="103,31,202,57"/>
+<area shape="poly" title=" " alt="" coords="237,31,203,39,202,34,232,31"/>
+<area shape="poly" title=" " alt="" coords="85,32,55,26,55,21,90,29"/>
 </map>
 </div>
 
@@ -208,23 +225,24 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Writes a line to the log file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">line</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><br  />
- </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_logger_ae53840e06b18681cc68f444833ead18a_icgraph.png" border="0" usemap="#aclass_logger_ae53840e06b18681cc68f444833ead18a_icgraph" alt=""/></div>
 <map name="aclass_logger_ae53840e06b18681cc68f444833ead18a_icgraph" id="aclass_logger_ae53840e06b18681cc68f444833ead18a_icgraph">
-<area shape="rect" title=" " alt="" coords="250,5,383,32"/>
-<area shape="rect" href="server_8cpp.html#af2286298cad439594cd8e1e74c58e186" title=" " alt="" coords="103,5,202,32"/>
+<area shape="rect" title="Writes a line to the log file." alt="" coords="250,5,383,32"/>
+<area shape="rect" href="server_8cpp.html#af2286298cad439594cd8e1e74c58e186" title="Creates a thread for each connection." alt="" coords="103,5,202,32"/>
 <area shape="poly" title=" " alt="" coords="232,19,203,21,202,16,237,19"/>
-<area shape="rect" href="server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="rect" href="server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main entry point for the server." alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
 </map>
 </div>

@@ -1,7 +1,7 @@
 <map id="Reader::IsOpen" name="Reader::IsOpen">
-<area shape="rect" id="Node000001" title=" " alt="" coords="224,31,337,57"/>
+<area shape="rect" id="Node000001" title="Checks to see if the file is open or at EOF." alt="" coords="224,31,337,57"/>
 <area shape="rect" id="Node000002" href="$client_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="66,5,115,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,36,115,25,115,19,210,33"/>
-<area shape="rect" id="Node000003" href="$namespace_unit_tests.html#a8f27bf8256ff9f59586fee3267448584" title=" " alt="" coords="5,56,176,83"/>
+<area shape="rect" id="Node000003" href="$namespace_unit_tests.html#a36ae281314df9ffad80c4fc259305e4a" title=" " alt="" coords="5,56,176,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="206,54,176,61,176,55,211,53"/>
 </map>

@@ -103,12 +103,16 @@ $(function(){initNavTree('class_deserializer.html',''); initResizable(); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3161e83c48efe82a2a4256a8d23b4085" id="r_a3161e83c48efe82a2a4256a8d23b4085"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3161e83c48efe82a2a4256a8d23b4085">DeserializeBuffer</a> (char *buffer)</td></tr>
+<tr class="memdesc:a3161e83c48efe82a2a4256a8d23b4085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves information from a buffer to the private members of the deserializer.  <br /></td></tr>
 <tr class="separator:a3161e83c48efe82a2a4256a8d23b4085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95e40933851b8c81461b0b5a318e2879" id="r_a95e40933851b8c81461b0b5a318e2879"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95e40933851b8c81461b0b5a318e2879">GetFuel</a> ()</td></tr>
+<tr class="memdesc:a95e40933851b8c81461b0b5a318e2879"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the private member, fuel.  <br /></td></tr>
 <tr class="separator:a95e40933851b8c81461b0b5a318e2879"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0dcc0a5b8e23fd6adbb75ac302ceeba" id="r_ac0dcc0a5b8e23fd6adbb75ac302ceeba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0dcc0a5b8e23fd6adbb75ac302ceeba">GetFlag</a> ()</td></tr>
+<tr class="memdesc:ac0dcc0a5b8e23fd6adbb75ac302ceeba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the finished flag.  <br /></td></tr>
 <tr class="separator:ac0dcc0a5b8e23fd6adbb75ac302ceeba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a403f4160ad7aa570b8b3189857e12a" id="r_a8a403f4160ad7aa570b8b3189857e12a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a403f4160ad7aa570b8b3189857e12a">GetDatetime</a> ()</td></tr>
+<tr class="memdesc:a8a403f4160ad7aa570b8b3189857e12a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the date and time.  <br /></td></tr>
 <tr class="separator:a8a403f4160ad7aa570b8b3189857e12a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -126,6 +130,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Moves information from a buffer to the private members of the deserializer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">buffer</td><td><br  />
@@ -138,11 +144,13 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_deserializer_a3161e83c48efe82a2a4256a8d23b4085_icgraph.png" border="0" usemap="#aclass_deserializer_a3161e83c48efe82a2a4256a8d23b4085_icgraph" alt=""/></div>
 <map name="aclass_deserializer_a3161e83c48efe82a2a4256a8d23b4085_icgraph" id="aclass_deserializer_a3161e83c48efe82a2a4256a8d23b4085_icgraph">
-<area shape="rect" title=" " alt="" coords="250,5,413,48"/>
-<area shape="rect" href="server_8cpp.html#af2286298cad439594cd8e1e74c58e186" title=" " alt="" coords="103,13,202,40"/>
-<area shape="poly" title=" " alt="" coords="232,27,202,29,202,24,237,26"/>
-<area shape="rect" href="server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,55,40"/>
-<area shape="poly" title=" " alt="" coords="85,28,55,29,55,24,90,26"/>
+<area shape="rect" title="Moves information from a buffer to the private members of the deserializer." alt="" coords="321,23,484,65"/>
+<area shape="rect" href="server_8cpp.html#af2286298cad439594cd8e1e74c58e186" title="Creates a thread for each connection." alt="" coords="138,5,238,32"/>
+<area shape="poly" title=" " alt="" coords="303,33,238,27,238,22,308,32"/>
+<area shape="rect" href="namespace_unit_tests.html#a36ae281314df9ffad80c4fc259305e4a" title=" " alt="" coords="103,56,273,83"/>
+<area shape="poly" title=" " alt="" coords="308,55,274,62,273,57,303,56"/>
+<area shape="rect" href="server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main entry point for the server." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="121,21,56,21,55,16,124,17"/>
 </map>
 </div>
 
@@ -162,18 +170,21 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd><br  />
- </dd></dl>
+
+<p>Returns the date and time. </p>
+<dl class="section return"><dt>Returns</dt><dd>datetime </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_deserializer_a8a403f4160ad7aa570b8b3189857e12a_icgraph.png" border="0" usemap="#aclass_deserializer_a8a403f4160ad7aa570b8b3189857e12a_icgraph" alt=""/></div>
 <map name="aclass_deserializer_a8a403f4160ad7aa570b8b3189857e12a_icgraph" id="aclass_deserializer_a8a403f4160ad7aa570b8b3189857e12a_icgraph">
-<area shape="rect" title=" " alt="" coords="250,5,422,32"/>
-<area shape="rect" href="server_8cpp.html#af2286298cad439594cd8e1e74c58e186" title=" " alt="" coords="103,5,202,32"/>
-<area shape="poly" title=" " alt="" coords="232,19,203,21,202,16,237,19"/>
-<area shape="rect" href="server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+<area shape="rect" title="Returns the date and time." alt="" coords="321,31,493,57"/>
+<area shape="rect" href="server_8cpp.html#af2286298cad439594cd8e1e74c58e186" title="Creates a thread for each connection." alt="" coords="138,5,238,32"/>
+<area shape="poly" title=" " alt="" coords="303,33,238,27,238,22,308,32"/>
+<area shape="rect" href="namespace_unit_tests.html#a36ae281314df9ffad80c4fc259305e4a" title=" " alt="" coords="103,56,273,83"/>
+<area shape="poly" title=" " alt="" coords="308,55,274,62,273,57,303,56"/>
+<area shape="rect" href="server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main entry point for the server." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="121,21,56,21,55,16,124,17"/>
 </map>
 </div>
 
@@ -193,18 +204,21 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd><br  />
- </dd></dl>
+
+<p>Returns the finished flag. </p>
+<dl class="section return"><dt>Returns</dt><dd>flag </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_deserializer_ac0dcc0a5b8e23fd6adbb75ac302ceeba_icgraph.png" border="0" usemap="#aclass_deserializer_ac0dcc0a5b8e23fd6adbb75ac302ceeba_icgraph" alt=""/></div>
 <map name="aclass_deserializer_ac0dcc0a5b8e23fd6adbb75ac302ceeba_icgraph" id="aclass_deserializer_ac0dcc0a5b8e23fd6adbb75ac302ceeba_icgraph">
-<area shape="rect" title=" " alt="" coords="250,5,394,32"/>
-<area shape="rect" href="server_8cpp.html#af2286298cad439594cd8e1e74c58e186" title=" " alt="" coords="103,5,202,32"/>
-<area shape="poly" title=" " alt="" coords="232,19,203,21,203,16,237,19"/>
-<area shape="rect" href="server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+<area shape="rect" title="Returns the finished flag." alt="" coords="321,31,465,57"/>
+<area shape="rect" href="server_8cpp.html#af2286298cad439594cd8e1e74c58e186" title="Creates a thread for each connection." alt="" coords="138,5,238,32"/>
+<area shape="poly" title=" " alt="" coords="303,34,238,27,238,22,308,33"/>
+<area shape="rect" href="namespace_unit_tests.html#a36ae281314df9ffad80c4fc259305e4a" title=" " alt="" coords="103,56,273,83"/>
+<area shape="poly" title=" " alt="" coords="308,55,274,61,273,56,303,55"/>
+<area shape="rect" href="server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main entry point for the server." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="121,21,56,21,55,16,124,17"/>
 </map>
 </div>
 
@@ -224,18 +238,21 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd><br  />
- </dd></dl>
+
+<p>Returns the value of the private member, fuel. </p>
+<dl class="section return"><dt>Returns</dt><dd>fuel </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_deserializer_a95e40933851b8c81461b0b5a318e2879_icgraph.png" border="0" usemap="#aclass_deserializer_a95e40933851b8c81461b0b5a318e2879_icgraph" alt=""/></div>
 <map name="aclass_deserializer_a95e40933851b8c81461b0b5a318e2879_icgraph" id="aclass_deserializer_a95e40933851b8c81461b0b5a318e2879_icgraph">
-<area shape="rect" title=" " alt="" coords="250,5,394,32"/>
-<area shape="rect" href="server_8cpp.html#af2286298cad439594cd8e1e74c58e186" title=" " alt="" coords="103,5,202,32"/>
-<area shape="poly" title=" " alt="" coords="232,19,203,21,203,16,237,19"/>
-<area shape="rect" href="server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+<area shape="rect" title="Returns the value of the private member, fuel." alt="" coords="321,31,465,57"/>
+<area shape="rect" href="server_8cpp.html#af2286298cad439594cd8e1e74c58e186" title="Creates a thread for each connection." alt="" coords="138,5,238,32"/>
+<area shape="poly" title=" " alt="" coords="303,34,238,27,238,22,308,33"/>
+<area shape="rect" href="namespace_unit_tests.html#a36ae281314df9ffad80c4fc259305e4a" title=" " alt="" coords="103,56,273,83"/>
+<area shape="poly" title=" " alt="" coords="308,55,274,61,273,56,303,55"/>
+<area shape="rect" href="server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main entry point for the server." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="121,21,56,21,55,16,124,17"/>
 </map>
 </div>
 

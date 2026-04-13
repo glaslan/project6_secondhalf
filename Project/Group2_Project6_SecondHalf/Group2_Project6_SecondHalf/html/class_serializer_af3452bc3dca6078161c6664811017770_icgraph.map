@@ -1,5 +1,7 @@
 <map id="Serializer::Serialize" name="Serializer::Serialize">
-<area shape="rect" id="Node000001" title=" " alt="" coords="103,5,236,32"/>
-<area shape="rect" id="Node000002" href="$client_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+<area shape="rect" id="Node000001" title="adds continue flag, datetime and fuel into buffer to be sent" alt="" coords="224,31,357,57"/>
+<area shape="rect" id="Node000002" href="$client_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="66,5,115,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,35,115,24,115,19,210,32"/>
+<area shape="rect" id="Node000003" href="$namespace_unit_tests.html#a36ae281314df9ffad80c4fc259305e4a" title=" " alt="" coords="5,56,176,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="205,55,176,61,176,56,211,54"/>
 </map>

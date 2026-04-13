@@ -104,6 +104,7 @@ $(function(){initNavTree('client_8cpp.html',''); initResizable(); });
 <code>#include &lt;winsock.h&gt;</code><br />
 <code>#include &lt;thread&gt;</code><br />
 <code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;random&gt;</code><br />
 <code>#include &quot;<a class="el" href="constants_8h_source.html">../Server/constants.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_file_reader_8h_source.html">FileReader.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_parser_8h_source.html">Parser.h</a>&quot;</code><br />
@@ -113,45 +114,40 @@ Include dependency graph for client.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="client_8cpp__incl.png" border="0" usemap="#a_client_2client_8cpp" alt=""/></div>
 <map name="a_client_2client_8cpp" id="a_client_2client_8cpp">
-<area shape="rect" title=" " alt="" coords="363,5,478,32"/>
+<area shape="rect" title=" " alt="" coords="426,5,541,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,66,107"/>
-<area shape="poly" title=" " alt="" coords="361,30,238,51,82,82,80,77,237,46,365,27"/>
-<area shape="rect" title=" " alt="" coords="329,229,400,256"/>
-<area shape="poly" title=" " alt="" coords="412,31,397,55,383,81,374,116,369,151,366,215,361,212,363,151,369,115,378,79,392,52,408,34"/>
-<area shape="rect" title=" " alt="" coords="166,155,223,181"/>
-<area shape="poly" title=" " alt="" coords="360,24,328,32,291,43,255,59,224,82,207,109,199,141,194,138,202,107,220,78,252,54,289,37,327,27,365,22"/>
-<area shape="rect" title=" " alt="" coords="234,80,317,107"/>
-<area shape="poly" title=" " alt="" coords="393,34,316,75,313,70,398,31"/>
-<area shape="rect" title=" " alt="" coords="529,155,609,181"/>
-<area shape="poly" title=" " alt="" coords="479,25,529,44,551,59,570,79,577,93,580,109,578,141,574,138,574,109,572,95,565,81,548,63,526,48,479,31"/>
-<area shape="rect" title=" " alt="" coords="392,80,450,107"/>
-<area shape="poly" title=" " alt="" coords="422,30,423,66,419,63,419,35"/>
-<area shape="rect" title=" " alt="" coords="473,80,534,107"/>
-<area shape="poly" title=" " alt="" coords="436,30,481,70,475,70,435,35"/>
-<area shape="rect" href="constants_8h.html" title=" " alt="" coords="738,229,882,256"/>
-<area shape="poly" title=" " alt="" coords="479,22,634,40,708,56,737,66,758,78,773,91,785,107,801,144,810,181,812,216,808,212,804,182,796,145,781,110,769,95,755,82,735,71,706,62,633,46,479,27"/>
-<area shape="rect" href="_file_reader_8h.html" title=" " alt="" coords="409,155,504,181"/>
-<area shape="poly" title=" " alt="" coords="478,30,517,48,535,62,548,79,553,89,553,100,543,119,525,136,502,150,500,145,522,132,539,116,548,99,548,90,544,81,531,66,514,53,477,35"/>
-<area shape="rect" href="_parser_8h.html" title=" " alt="" coords="90,80,160,107"/>
-<area shape="poly" title=" " alt="" coords="367,35,176,82,174,77,370,30"/>
-<area shape="rect" href="_serializer_8h.html" title=" " alt="" coords="659,80,745,107"/>
-<area shape="poly" title=" " alt="" coords="470,30,646,76,641,78,470,35"/>
-<area shape="poly" title=" " alt="" coords="443,181,394,222,391,217,438,183"/>
-<area shape="rect" title=" " alt="" coords="540,229,606,256"/>
-<area shape="poly" title=" " alt="" coords="478,179,542,221,537,220,476,184"/>
-<area shape="rect" title=" " alt="" coords="430,229,484,256"/>
-<area shape="poly" title=" " alt="" coords="459,180,459,215,455,212,455,184"/>
-<area shape="poly" title=" " alt="" coords="127,105,135,143,143,163,156,179,192,205,233,222,275,232,316,240,311,240,274,237,231,227,189,210,152,183,139,165,130,145,124,110"/>
-<area shape="poly" title=" " alt="" coords="137,105,174,143,169,144,136,110"/>
-<area shape="poly" title=" " alt="" coords="681,106,606,150,604,145,676,108"/>
-<area shape="poly" title=" " alt="" coords="721,105,747,126,772,153,791,184,803,216,799,213,786,186,768,156,744,130,720,110"/>
-<area shape="rect" href="packet_8h.html" title=" " alt="" coords="633,155,758,181"/>
-<area shape="poly" title=" " alt="" coords="703,105,700,141,696,137,699,109"/>
-<area shape="poly" title=" " alt="" coords="639,182,419,232,416,233,415,227,418,227,634,182"/>
-<area shape="poly" title=" " alt="" coords="716,179,780,221,775,220,715,184"/>
-<area shape="poly" title=" " alt="" coords="677,181,608,223,607,218,672,183"/>
-<area shape="rect" title=" " alt="" coords="647,229,715,256"/>
-<area shape="poly" title=" " alt="" coords="695,180,688,216,685,212,691,184"/>
+<area shape="poly" title=" " alt="" coords="423,27,274,48,82,82,80,77,273,43,428,25"/>
+<area shape="rect" title=" " alt="" coords="188,155,259,181"/>
+<area shape="poly" title=" " alt="" coords="423,29,323,51,278,65,249,82,240,94,233,109,226,141,222,137,228,107,235,92,246,78,276,60,322,46,428,27"/>
+<area shape="rect" title=" " alt="" coords="311,155,368,181"/>
+<area shape="poly" title=" " alt="" coords="460,32,426,55,393,82,371,112,353,143,350,138,366,109,390,78,423,51,455,34"/>
+<area shape="rect" title=" " alt="" coords="403,80,486,107"/>
+<area shape="poly" title=" " alt="" coords="479,31,460,68,457,64,475,34"/>
+<area shape="rect" title=" " alt="" coords="489,155,569,181"/>
+<area shape="poly" title=" " alt="" coords="489,30,523,141,518,139,486,35"/>
+<area shape="rect" title=" " alt="" coords="722,80,779,107"/>
+<area shape="poly" title=" " alt="" coords="530,30,709,80,704,81,530,35"/>
+<area shape="rect" title=" " alt="" coords="803,80,863,107"/>
+<area shape="poly" title=" " alt="" coords="542,27,653,47,790,79,785,79,652,53,542,32"/>
+<area shape="rect" title=" " alt="" coords="887,80,952,107"/>
+<area shape="poly" title=" " alt="" coords="542,24,688,44,875,79,869,80,687,50,542,29"/>
+<area shape="rect" href="constants_8h.html" title=" " alt="" coords="605,155,748,181"/>
+<area shape="poly" title=" " alt="" coords="541,23,573,29,604,40,634,56,660,78,675,108,680,141,675,137,670,109,656,82,631,61,602,45,571,35,542,28"/>
+<area shape="rect" href="_file_reader_8h.html" title=" " alt="" coords="89,80,184,107"/>
+<area shape="poly" title=" " alt="" coords="424,34,200,82,199,76,427,30"/>
+<area shape="rect" href="_parser_8h.html" title=" " alt="" coords="259,80,329,107"/>
+<area shape="poly" title=" " alt="" coords="453,32,343,76,341,71,448,33"/>
+<area shape="rect" href="_serializer_8h.html" title=" " alt="" coords="560,80,647,107"/>
+<area shape="poly" title=" " alt="" coords="505,30,572,72,567,71,504,35"/>
+<area shape="poly" title=" " alt="" coords="153,105,200,145,194,145,151,110"/>
+<area shape="rect" title=" " alt="" coords="20,155,86,181"/>
+<area shape="poly" title=" " alt="" coords="125,106,81,146,77,142,120,108"/>
+<area shape="rect" title=" " alt="" coords="110,155,164,181"/>
+<area shape="poly" title=" " alt="" coords="139,105,139,140,134,138,135,109"/>
+<area shape="poly" title=" " alt="" coords="284,106,248,146,245,141,279,108"/>
+<area shape="poly" title=" " alt="" coords="303,105,326,142,321,141,301,110"/>
+<area shape="poly" title=" " alt="" coords="593,106,554,146,551,142,588,108"/>
+<area shape="poly" title=" " alt="" coords="617,105,656,144,651,143,615,110"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -219,23 +215,23 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="client_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#aclient_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
 <map name="aclient_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="aclient_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
 <area shape="rect" title=" " alt="" coords="5,132,55,159"/>
-<area shape="rect" href="class_serializer.html#a5de8189a4a39db4cf70169f55aad5c4e" title=" " alt="" coords="112,5,250,32"/>
+<area shape="rect" href="class_serializer.html#a5de8189a4a39db4cf70169f55aad5c4e" title="gets the pointer to the buffer to be used to send" alt="" coords="112,5,250,32"/>
 <area shape="poly" title=" " alt="" coords="35,130,60,87,79,63,101,42,111,38,108,42,104,46,83,66,64,90,40,133"/>
-<area shape="rect" href="class_reader.html#acf9d3291051824f0f20b583f8d6819ad" title=" " alt="" coords="124,56,238,83"/>
+<area shape="rect" href="class_reader.html#acf9d3291051824f0f20b583f8d6819ad" title="Checks to see if the file is open or at EOF." alt="" coords="124,56,238,83"/>
 <area shape="poly" title=" " alt="" coords="45,130,71,111,101,92,117,87,114,91,104,97,74,115,49,133"/>
-<area shape="rect" href="class_reader.html#a815b0e140b16c4ba74af4e98d7f0f635" title=" " alt="" coords="118,107,244,133"/>
+<area shape="rect" href="class_reader.html#a815b0e140b16c4ba74af4e98d7f0f635" title="Reads a single line from the file specified in the constructor." alt="" coords="118,107,244,133"/>
 <area shape="poly" title=" " alt="" coords="54,139,104,131,101,135,56,144"/>
-<area shape="rect" href="class_serializer.html#af3452bc3dca6078161c6664811017770" title=" " alt="" coords="114,157,248,184"/>
+<area shape="rect" href="class_serializer.html#af3452bc3dca6078161c6664811017770" title="adds continue flag, datetime and fuel into buffer to be sent" alt="" coords="114,157,248,184"/>
 <area shape="poly" title=" " alt="" coords="54,147,101,155,97,159,56,152"/>
 <area shape="rect" href="class_parser.html#aae9a8b634f3393e39ba1635105f5f32b" title=" " alt="" coords="541,195,633,221"/>
 <area shape="poly" title=" " alt="" coords="35,156,45,182,59,211,78,239,104,260,126,265,170,267,292,266,418,260,493,252,523,241,549,230,554,229,525,246,494,257,418,266,292,272,170,272,126,270,102,265,74,242,54,213,41,184,34,162"/>
-<area shape="rect" href="class_serializer.html#a947792b78c1ae6fb7eea9b6289d40329" title=" " alt="" coords="103,208,259,251"/>
+<area shape="rect" href="class_serializer.html#a947792b78c1ae6fb7eea9b6289d40329" title="clears buffer and sets flag to EndPacket to be sent" alt="" coords="103,208,259,251"/>
 <area shape="poly" title=" " alt="" coords="49,157,104,194,114,200,109,201,101,198,48,162"/>
-<area shape="rect" href="class_serializer.html#a2f3e8a72998964ebbbe6866c2a9d8d34" title=" " alt="" coords="307,115,493,141"/>
+<area shape="rect" href="class_serializer.html#a2f3e8a72998964ebbbe6866c2a9d8d34" title="adds datetime into buffer" alt="" coords="307,115,493,141"/>
 <area shape="poly" title=" " alt="" coords="247,155,316,144,311,146,248,160"/>
-<area shape="rect" href="class_serializer.html#a38bee1b71a64c6637a515bbbe0128e92" title=" " alt="" coords="321,216,479,243"/>
+<area shape="rect" href="class_serializer.html#a38bee1b71a64c6637a515bbbe0128e92" title="puts flag into buffer" alt="" coords="321,216,479,243"/>
 <area shape="poly" title=" " alt="" coords="234,182,335,211,330,212,233,187"/>
-<area shape="rect" href="class_serializer.html#ac01b9e1192da6d639ae1496494b76711" title=" " alt="" coords="321,165,479,192"/>
+<area shape="rect" href="class_serializer.html#ac01b9e1192da6d639ae1496494b76711" title="puts fuel into buffer" alt="" coords="321,165,479,192"/>
 <area shape="poly" title=" " alt="" coords="247,170,308,175,303,176,248,176"/>
 <area shape="poly" title=" " alt="" coords="461,139,494,151,556,186,551,186,492,156,461,145"/>
 <area shape="poly" title=" " alt="" coords="259,227,308,229,303,230,259,232"/>

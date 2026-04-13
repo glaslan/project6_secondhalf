@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['serializer_0',['Serializer',['../class_serializer.html',1,'']]]
+  ['usagecalculator_0',['UsageCalculator',['../class_usage_calculator.html',1,'']]]
 ];

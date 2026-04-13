@@ -1,7 +1,9 @@
 <map id="Deserializer::GetDatetime" name="Deserializer::GetDatetime">
-<area shape="rect" id="Node000001" title=" " alt="" coords="250,5,422,32"/>
-<area shape="rect" id="Node000002" href="$server_8cpp.html#af2286298cad439594cd8e1e74c58e186" title=" " alt="" coords="103,5,202,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,19,203,21,202,16,237,19"/>
-<area shape="rect" id="Node000003" href="$server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+<area shape="rect" id="Node000001" title="Returns the date and time." alt="" coords="321,31,493,57"/>
+<area shape="rect" id="Node000002" href="$server_8cpp.html#af2286298cad439594cd8e1e74c58e186" title="Creates a thread for each connection." alt="" coords="138,5,238,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="303,33,238,27,238,22,308,32"/>
+<area shape="rect" id="Node000004" href="$namespace_unit_tests.html#a36ae281314df9ffad80c4fc259305e4a" title=" " alt="" coords="103,56,273,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="308,55,274,62,273,57,303,56"/>
+<area shape="rect" id="Node000003" href="$server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main entry point for the server." alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="121,21,56,21,55,16,124,17"/>
 </map>

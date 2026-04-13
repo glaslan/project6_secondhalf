@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['packet_0',['Packet',['../class_packet.html',1,'']]],
-  ['parser_1',['Parser',['../class_parser.html',1,'']]]
+  ['reader_0',['Reader',['../class_reader.html',1,'']]]
 ];

@@ -110,22 +110,23 @@ $(function(){initNavTree('_deserializer_8h_source.html',''); initResizable(); })
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    std::string datetime;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">float</span> fuel;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> flag;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">// Nothing to do in the serializer constructor so just use the default one</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_deserializer.html#a3161e83c48efe82a2a4256a8d23b4085">DeserializeBuffer</a>(<span class="keywordtype">char</span>* buffer);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_deserializer.html#a95e40933851b8c81461b0b5a318e2879">GetFuel</a>();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_deserializer.html#ac0dcc0a5b8e23fd6adbb75ac302ceeba">GetFlag</a>();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    std::string <a class="code hl_function" href="class_deserializer.html#a8a403f4160ad7aa570b8b3189857e12a">GetDatetime</a>();</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    std::stringstream stream;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">// Nothing to do in the serializer constructor so just use the default one</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_deserializer.html#a3161e83c48efe82a2a4256a8d23b4085">DeserializeBuffer</a>(<span class="keywordtype">char</span>* buffer);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_deserializer.html#a95e40933851b8c81461b0b5a318e2879">GetFuel</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_deserializer.html#ac0dcc0a5b8e23fd6adbb75ac302ceeba">GetFlag</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::string <a class="code hl_function" href="class_deserializer.html#a8a403f4160ad7aa570b8b3189857e12a">GetDatetime</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
 </div>
 <div class="ttc" id="aclass_deserializer_html"><div class="ttname"><a href="class_deserializer.html">Deserializer</a></div><div class="ttdef"><b>Definition</b> Deserializer.h:7</div></div>
-<div class="ttc" id="aclass_deserializer_html_a3161e83c48efe82a2a4256a8d23b4085"><div class="ttname"><a href="class_deserializer.html#a3161e83c48efe82a2a4256a8d23b4085">Deserializer::DeserializeBuffer</a></div><div class="ttdeci">void DeserializeBuffer(char *buffer)</div><div class="ttdef"><b>Definition</b> Deserializer.cpp:11</div></div>
-<div class="ttc" id="aclass_deserializer_html_a8a403f4160ad7aa570b8b3189857e12a"><div class="ttname"><a href="class_deserializer.html#a8a403f4160ad7aa570b8b3189857e12a">Deserializer::GetDatetime</a></div><div class="ttdeci">std::string GetDatetime()</div><div class="ttdef"><b>Definition</b> Deserializer.cpp:80</div></div>
-<div class="ttc" id="aclass_deserializer_html_a95e40933851b8c81461b0b5a318e2879"><div class="ttname"><a href="class_deserializer.html#a95e40933851b8c81461b0b5a318e2879">Deserializer::GetFuel</a></div><div class="ttdeci">float GetFuel()</div><div class="ttdef"><b>Definition</b> Deserializer.cpp:66</div></div>
-<div class="ttc" id="aclass_deserializer_html_ac0dcc0a5b8e23fd6adbb75ac302ceeba"><div class="ttname"><a href="class_deserializer.html#ac0dcc0a5b8e23fd6adbb75ac302ceeba">Deserializer::GetFlag</a></div><div class="ttdeci">int GetFlag()</div><div class="ttdef"><b>Definition</b> Deserializer.cpp:73</div></div>
+<div class="ttc" id="aclass_deserializer_html_a3161e83c48efe82a2a4256a8d23b4085"><div class="ttname"><a href="class_deserializer.html#a3161e83c48efe82a2a4256a8d23b4085">Deserializer::DeserializeBuffer</a></div><div class="ttdeci">void DeserializeBuffer(char *buffer)</div><div class="ttdoc">Moves information from a buffer to the private members of the deserializer.</div><div class="ttdef"><b>Definition</b> Deserializer.cpp:11</div></div>
+<div class="ttc" id="aclass_deserializer_html_a8a403f4160ad7aa570b8b3189857e12a"><div class="ttname"><a href="class_deserializer.html#a8a403f4160ad7aa570b8b3189857e12a">Deserializer::GetDatetime</a></div><div class="ttdeci">std::string GetDatetime()</div><div class="ttdoc">Returns the date and time.</div><div class="ttdef"><b>Definition</b> Deserializer.cpp:78</div></div>
+<div class="ttc" id="aclass_deserializer_html_a95e40933851b8c81461b0b5a318e2879"><div class="ttname"><a href="class_deserializer.html#a95e40933851b8c81461b0b5a318e2879">Deserializer::GetFuel</a></div><div class="ttdeci">float GetFuel()</div><div class="ttdoc">Returns the value of the private member, fuel.</div><div class="ttdef"><b>Definition</b> Deserializer.cpp:64</div></div>
+<div class="ttc" id="aclass_deserializer_html_ac0dcc0a5b8e23fd6adbb75ac302ceeba"><div class="ttname"><a href="class_deserializer.html#ac0dcc0a5b8e23fd6adbb75ac302ceeba">Deserializer::GetFlag</a></div><div class="ttdeci">int GetFlag()</div><div class="ttdoc">Returns the finished flag.</div><div class="ttdef"><b>Definition</b> Deserializer.cpp:71</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

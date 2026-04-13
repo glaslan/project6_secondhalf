@@ -1,5 +1,5 @@
 <map id="Serializer::SerializeEndPacket" name="Serializer::SerializeEndPacket">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,162,48"/>
-<area shape="rect" id="Node000002" href="$class_serializer.html#a38bee1b71a64c6637a515bbbe0128e92" title=" " alt="" coords="210,13,368,40"/>
+<area shape="rect" id="Node000001" title="clears buffer and sets flag to EndPacket to be sent" alt="" coords="5,5,162,48"/>
+<area shape="rect" id="Node000002" href="$class_serializer.html#a38bee1b71a64c6637a515bbbe0128e92" title="puts flag into buffer" alt="" coords="210,13,368,40"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,24,197,26,191,27,162,29"/>
 </map>

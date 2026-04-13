@@ -2,20 +2,28 @@
 \hypertarget{class_logger}{}\label{class_logger}\index{Logger@{Logger}}
 
 
+Creates log files and writes information or errors to them.  
+
+
+
+
 {\ttfamily \#include $<$Logger.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_logger_a0fa708cad28289b8eb7bc1627e3d099e}{Logger}} (std\+::string path, std\+::string errorpath)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor that creates and/or opens a log file and an error log file at the provided paths. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_logger_acb668a9e186a25fbaad2e4af6d1ed00a}{\texorpdfstring{$\sim$}{\string~}\+Logger}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Deconstructor that closes the two files. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_logger_ae53840e06b18681cc68f444833ead18a}{Write\+To\+File}} (std\+::string data)
-\item 
+\begin{DoxyCompactList}\small\item\em Writes a line to the log file. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_logger_a1d6a9d1154f77573a072ed99886f68ae}{Write\+Error}} (std\+::string error)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Writes a line to the error file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Creates log files and writes information or errors to them. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_logger_a0fa708cad28289b8eb7bc1627e3d099e}\label{class_logger_a0fa708cad28289b8eb7bc1627e3d099e} 
@@ -23,6 +31,10 @@ bool \mbox{\hyperlink{class_logger_a1d6a9d1154f77573a072ed99886f68ae}{Write\+Err
 \index{Logger@{Logger}!Logger@{Logger}}
 \doxysubsubsection{\texorpdfstring{Logger()}{Logger()}}
 {\footnotesize\ttfamily Logger\+::\+Logger (\begin{DoxyParamCaption}\item[{std\+::string}]{path,  }\item[{std\+::string}]{errorpath }\end{DoxyParamCaption})}
+
+
+
+Constructor that creates and/or opens a log file and an error log file at the provided paths. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -40,6 +52,10 @@ bool \mbox{\hyperlink{class_logger_a1d6a9d1154f77573a072ed99886f68ae}{Write\+Err
 
 
 
+Deconstructor that closes the two files. 
+
+
+
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_logger_a1d6a9d1154f77573a072ed99886f68ae}\label{class_logger_a1d6a9d1154f77573a072ed99886f68ae} 
 \index{Logger@{Logger}!WriteError@{WriteError}}
@@ -48,19 +64,23 @@ bool \mbox{\hyperlink{class_logger_a1d6a9d1154f77573a072ed99886f68ae}{Write\+Err
 {\footnotesize\ttfamily bool Logger\+::\+Write\+Error (\begin{DoxyParamCaption}\item[{std\+::string}]{error }\end{DoxyParamCaption})}
 
 
+
+Writes a line to the error file. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em error} & \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-~\newline
- 
+bool 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=248pt]{class_logger_a1d6a9d1154f77573a072ed99886f68ae_icgraph}
+\includegraphics[width=350pt]{class_logger_a1d6a9d1154f77573a072ed99886f68ae_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{class_logger_ae53840e06b18681cc68f444833ead18a}\label{class_logger_ae53840e06b18681cc68f444833ead18a} 
@@ -70,15 +90,19 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily bool Logger\+::\+Write\+To\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{line }\end{DoxyParamCaption})}
 
 
+
+Writes a line to the log file. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em line} & \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-~\newline
- 
+bool 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

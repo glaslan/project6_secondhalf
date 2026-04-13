@@ -8,21 +8,21 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_serializer_a9fe7f31924098f75278d059f8443fd5b}{Serializer}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em constructor for serializer, alocates memory for buffer \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_serializer_af3452bc3dca6078161c6664811017770}{Serialize}} (std\+::string datetime, float fuel)
-\item 
+\begin{DoxyCompactList}\small\item\em adds continue flag, datetime and fuel into buffer to be sent \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_serializer_a947792b78c1ae6fb7eea9b6289d40329}{Serialize\+End\+Packet}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em clears buffer and sets flag to End\+Packet to be sent \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_serializer_a38bee1b71a64c6637a515bbbe0128e92}{Serialize\+Flag}} (unsigned char flag)
-\item 
+\begin{DoxyCompactList}\small\item\em puts flag into buffer \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_serializer_a2f3e8a72998964ebbbe6866c2a9d8d34}{Serialize\+Datetime}} (std\+::string datetime)
-\item 
+\begin{DoxyCompactList}\small\item\em adds datetime into buffer \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_serializer_ac01b9e1192da6d639ae1496494b76711}{Serialize\+Fuel}} (float fuel)
-\item 
+\begin{DoxyCompactList}\small\item\em puts fuel into buffer \end{DoxyCompactList}\item 
 char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_serializer_a5de8189a4a39db4cf70169f55aad5c4e}{Get\+Buffer}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em gets the pointer to the buffer to be used to send \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_serializer_a42a7d2d8e622ad1ef5f869813b498aa9}{\texorpdfstring{$\sim$}{\string~}\+Serializer}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em deallocates buffer \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -32,11 +32,19 @@ char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_serializer_a5de8189a4a39d
 \doxysubsubsection{\texorpdfstring{Serializer()}{Serializer()}}
 {\footnotesize\ttfamily Serializer\+::\+Serializer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+constructor for serializer, alocates memory for buffer 
+
 \Hypertarget{class_serializer_a42a7d2d8e622ad1ef5f869813b498aa9}\label{class_serializer_a42a7d2d8e622ad1ef5f869813b498aa9} 
 \index{Serializer@{Serializer}!````~Serializer@{\texorpdfstring{$\sim$}{\string~}Serializer}}
 \index{````~Serializer@{\texorpdfstring{$\sim$}{\string~}Serializer}!Serializer@{Serializer}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Serializer()}{\string~Serializer()}}
 {\footnotesize\ttfamily Serializer\+::\texorpdfstring{$\sim$}{\string~}\+Serializer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+deallocates buffer 
 
 
 
@@ -47,15 +55,19 @@ char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_serializer_a5de8189a4a39d
 \doxysubsubsection{\texorpdfstring{GetBuffer()}{GetBuffer()}}
 {\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} Serializer\+::\+Get\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+gets the pointer to the buffer to be used to send 
+
 \begin{DoxyReturn}{Returns}
-~\newline
- 
+char\texorpdfstring{$\ast$}{*} buffer 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=257pt]{class_serializer_a5de8189a4a39db4cf70169f55aad5c4e_icgraph}
+\includegraphics[width=348pt]{class_serializer_a5de8189a4a39db4cf70169f55aad5c4e_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{class_serializer_af3452bc3dca6078161c6664811017770}\label{class_serializer_af3452bc3dca6078161c6664811017770} 
@@ -65,25 +77,30 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily void Serializer\+::\+Serialize (\begin{DoxyParamCaption}\item[{std\+::string}]{datetime,  }\item[{float}]{fuel }\end{DoxyParamCaption})}
 
 
+
+adds continue flag, datetime and fuel into buffer to be sent 
+
+
 \begin{DoxyParams}{Parameters}
-{\em datetime} & \\
+{\em datetime} & datetime to put into buffer \\
 \hline
-{\em fuel} & ~\newline
- \\
+{\em fuel} & fuel to put into buffer \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_serializer_af3452bc3dca6078161c6664811017770_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=253pt]{class_serializer_af3452bc3dca6078161c6664811017770_icgraph}
+\includegraphics[width=344pt]{class_serializer_af3452bc3dca6078161c6664811017770_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{class_serializer_a2f3e8a72998964ebbbe6866c2a9d8d34}\label{class_serializer_a2f3e8a72998964ebbbe6866c2a9d8d34} 
@@ -93,19 +110,24 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily void Serializer\+::\+Serialize\+Datetime (\begin{DoxyParamCaption}\item[{std\+::string}]{datetime }\end{DoxyParamCaption})}
 
 
+
+adds datetime into buffer 
+
+
 \begin{DoxyParams}{Parameters}
-{\em datetime} & ~\newline
- \\
+{\em datetime} & datetime to put into buffer \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=324pt]{class_serializer_a2f3e8a72998964ebbbe6866c2a9d8d34_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -118,18 +140,24 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{SerializeEndPacket()}{SerializeEndPacket()}}
 {\footnotesize\ttfamily void Serializer\+::\+Serialize\+End\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+clears buffer and sets flag to End\+Packet to be sent 
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_serializer_a947792b78c1ae6fb7eea9b6289d40329_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=270pt]{class_serializer_a947792b78c1ae6fb7eea9b6289d40329_icgraph}
+\includegraphics[width=350pt]{class_serializer_a947792b78c1ae6fb7eea9b6289d40329_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{class_serializer_a38bee1b71a64c6637a515bbbe0128e92}\label{class_serializer_a38bee1b71a64c6637a515bbbe0128e92} 
@@ -139,12 +167,16 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily void Serializer\+::\+Serialize\+Flag (\begin{DoxyParamCaption}\item[{unsigned char}]{flag }\end{DoxyParamCaption})}
 
 
+
+puts flag into buffer 
+
+
 \begin{DoxyParams}{Parameters}
-{\em flag} & ~\newline
- \\
+{\em flag} & flag to put into buffer \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -158,12 +190,16 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily void Serializer\+::\+Serialize\+Fuel (\begin{DoxyParamCaption}\item[{float}]{fuel }\end{DoxyParamCaption})}
 
 
+
+puts fuel into buffer 
+
+
 \begin{DoxyParams}{Parameters}
-{\em fuel} & ~\newline
- \\
+{\em fuel} & fuel to put into buffer \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

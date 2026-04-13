@@ -1,5 +1,5 @@
 <map id="Serializer::SerializeDatetime" name="Serializer::SerializeDatetime">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,192,32"/>
+<area shape="rect" id="Node000001" title="adds datetime into buffer" alt="" coords="5,5,192,32"/>
 <area shape="rect" id="Node000002" href="$class_parser.html#aae9a8b634f3393e39ba1635105f5f32b" title=" " alt="" coords="240,5,331,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,16,227,19,222,19,192,21"/>
 </map>
