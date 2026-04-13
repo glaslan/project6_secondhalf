@@ -11,7 +11,7 @@
 void Deserializer::DeserializeBuffer(char* buffer) {
 
 	int offset = 0;
-
+	this->stream.str("");
 	memcpy(&this->flag, buffer + offset, PKT_SIZE_FLAG);
 	offset += PKT_SIZE_FLAG;
 
