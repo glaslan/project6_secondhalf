@@ -18,18 +18,17 @@
 /// @param ServerSocket 
 /// @param ConnectionSocket 
 
-void ServerThread(int ServerSocket, int ConnectionSocket) {
+void ServerThread(int ServerSocket, int ConnectionSocket, int flightId) {
 
     // Accept Connection 
     std::ofstream postFile;
     char buffer[BUFFER_SIZE] = { 0 };
-    std::time_t unix_time = std::time(0);
 
     DWORD timeout = 5000;
     setsockopt(ConnectionSocket, SOL_SOCKET, SO_RCVTIMEO, (char*)&timeout, sizeof(timeout));
 
-    std::string log_path("./log" + std::to_string(unix_time) + ".txt");
-    std::string error_path("./error" + std::to_string(unix_time) + ".txt");
+    std::string log_path("./log" + std::to_string(flightId) + ".txt");
+    std::string error_path("./error" + std::to_string(flightId) + ".txt");
 
     //std::cout << log_path << std::endl;
     //std::cout << error_path << std::endl;
@@ -38,6 +37,12 @@ void ServerThread(int ServerSocket, int ConnectionSocket) {
     Deserializer deserializer;
     UsageCalculator calculator(0);
     std::stringstream stream;
+
+    // send flightId to the client 
+    char flightIdPacket[sizeof(int)];
+    memcpy(flightIdPacket, &flightId, sizeof(int));
+    send(ConnectionSocket, flightIdPacket, sizeof(int), 0);
+
     // This block makes the data move
     // Recieve must come first
     bool quit = false;
@@ -81,6 +86,7 @@ int main() {
 
     WSADATA wsaData;
     Logger main_logger("./log.txt", "./errorlog.txt");
+    int flightId = 1;
 
     if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
         std::cout << "ERROR: Failed to start WSA" << std::endl;
@@ -129,7 +135,8 @@ int main() {
 
         // if the connection is succesful, create a new thread for the client
         // create thread for client
-        std::thread NewThread(ServerThread, ServerSocket, ConnectionSocket);
+        std::thread NewThread(ServerThread, ServerSocket, ConnectionSocket, flightId);
+        flightId++;
         std::cout << "Made a thread" << std::endl;
         // Detach thread from main program to allow it to continue running
         NewThread.detach();

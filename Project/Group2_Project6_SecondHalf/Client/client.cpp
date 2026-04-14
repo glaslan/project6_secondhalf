@@ -17,11 +17,9 @@
 
 #pragma warning(disable : 4996)
 #pragma comment(lib, "ws2_32.lib")
-/// @brief 
-/// 
-/// 
-/// 
-/// @return 
+/// @brief Client program makes a connection with the server and transmits each 
+/// line of a flight telemetry data one by one and then ends the connection
+/// @return 0 basic exit code
 
 int main() {
 
@@ -47,7 +45,7 @@ int main() {
     sockaddr_in svrAddr;
     svrAddr.sin_family = AF_INET;
     svrAddr.sin_port = htons(PORT);
-    svrAddr.sin_addr.s_addr = inet_addr("192.168.50.80");
+    svrAddr.sin_addr.s_addr = inet_addr("127.0.0.1");
     if (connect(ClientSocket, (struct sockaddr*)&svrAddr, sizeof(svrAddr)) < 0) {
         perror("ERROR: Connection attempt failed");
         closesocket(ClientSocket);
@@ -57,10 +55,10 @@ int main() {
     // open file and modules
     std::vector<std::string> files;
 
-    //files.push_back("FlightData/katl-kefd-B737-700.txt");
-    //files.push_back("FlightData/Telem_2023_3_12 14_56_40.txt");
+    files.push_back("FlightData/katl-kefd-B737-700.txt");
+    files.push_back("FlightData/Telem_2023_3_12 14_56_40.txt");
     files.push_back("FlightData/Telem_2023_3_12 16_26_4.txt");
-    //files.push_back("FlightData/Telem_2023_3_12 14_56_40.txt");
+    files.push_back("FlightData/Telem_2023_3_12 14_56_40.txt");
 
     std::random_device rd;
     std::mt19937 random_engine(rd());
@@ -69,6 +67,13 @@ int main() {
     Reader reader(files.at(random_generator(random_engine)));
     Serializer serializer;
     Parser parser;
+
+    char flightIdBuffer[sizeof(int)];
+    int flightId;
+
+    // get flightId
+    recv(ClientSocket, flightIdBuffer, sizeof(int), 0);
+    memcpy(&flightId, flightIdBuffer, sizeof(int));
 
     // read each line in file and send data
     while (reader.IsOpen()) {
@@ -110,8 +115,6 @@ int main() {
     closesocket(ClientSocket);
 
     WSACleanup();
-
-    std::cout << "Hello this is error net." << std::endl;
 
     return 0;
 }
